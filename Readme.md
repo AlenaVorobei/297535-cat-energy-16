@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Алёна Воробьева](https://up.htmlacademy.ru/adaptive/16/user/297535).
-* Наставник: `Неизвестно`.
+* Наставник: [Анна Лисененкова](https://up.htmlacademy.ru/htmlcss/24/user/85590).
 
 ---
 
