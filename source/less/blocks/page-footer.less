@@ -1,5 +1,34 @@
 .page-footer {
   background-color: @main-gray;
+
+  &__wrapper {
+    width: 280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    &__wrapper {
+      width: 708px;
+      margin: 0 auto;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 50px 0;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    &__wrapper {
+      width: 1200px;
+      margin: 0 auto;
+    }
+  }
 }
 
 .social {

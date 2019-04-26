@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -25,7 +27,9 @@
     <main class="page-main">
       <div class="container">
         <section class="catalog">
-          <h1 class="catalog__title">Каталог продукции</h1>
+          <div class="catalog__title-wrapper">
+            <h1 class="catalog__title">Каталог продукции</h1>
+          </div>
           <div class="catalog__wrapper">
             <div class="catalog__list product">
               <article class="product__item">
@@ -46,8 +50,8 @@
                       <td class="table__value">700Р</td>
                     </tr>
                   </table>
-                  <a class="product__order btn btn--primary">Заказать</a>
                 </section>
+                <a class="product__order btn btn--primary">Заказать</a>
               </article>
             </div>
             <div class="catalog__list product">
@@ -69,8 +73,8 @@
                       <td class="table__value">1000Р</td>
                     </tr>
                   </table>
-                  <a class="product__order btn btn--primary">Заказать</a>
                 </section>
+                <a class="product__order btn btn--primary">Заказать</a>
               </article>
             </div>
             <div class="catalog__list product">
@@ -92,8 +96,8 @@
                       <td class="table__value">700Р</td>
                     </tr>
                   </table>
-                  <a class="product__order btn btn--primary">Заказать</a>
                 </section>
+                <a class="product__order btn btn--primary">Заказать</a>
               </article>
             </div>
             <div class="catalog__list product">
@@ -115,8 +119,8 @@
                       <td class="table__value">1000Р</td>
                     </tr>
                   </table>
-                  <a class="product__order btn btn--primary">Заказать</a>
                 </section>
+                <a class="product__order btn btn--primary">Заказать</a>
               </article>
             </div>
             <div class="catalog__list product">
@@ -138,8 +142,8 @@
                       <td class="table__value">400Р</td>
                     </tr>
                   </table>
-                  <a class="product__order btn btn--primary">Заказать</a>
                 </section>
+                <a class="product__order btn btn--primary">Заказать</a>
               </article>
             </div>
             <div class="catalog__list product">
@@ -161,8 +165,8 @@
                       <td class="table__value">700Р</td>
                     </tr>
                   </table>
-                  <a class="product__order btn btn--primary">Заказать</a>
                 </section>
+                <a class="product__order btn btn--primary">Заказать</a>
               </article>
             </div>
             <div class="catalog__list product">
@@ -184,23 +188,25 @@
                       <td class="table__value">700Р</td>
                     </tr>
                   </table>
-                  <a class="product__order btn btn--primary">Заказать</a>
                 </section>
+                <a class="product__order btn btn--primary">Заказать</a>
               </article>
+            </div>
+            <div class="more">
+              <div class="more__wrapper">
+                <span class="more__plus">+</span>
+                <h2 class="more__title">Показать еще 100500 товаров</h2>
+                <p class="more__slogan">На самом деле вкусов гораздо больше!</p>
+                <a class="more__show btn btn--minor" href="#">Показать все</a>
+              </div>
             </div>
           </div>
         </section>
-        <section class="more">
-          <div class="more__wrapper">
-            <span class="more__plus">+</span>
-            <h2 class="more__title">Показать еще 100500 товаров</h2>
-            <p class="more__slogan">На самом деле вкусов гораздо больше!</p>
-            <a class="more__show btn btn--minor" href="#">Показать все</a>
-          </div>
-        </section>
         <section class="extra">
-          <div class="extra__wrapper">
+          <div class="extra__title-wrapper">
             <h2 class="extra__title">Дополнительные товары</h2>
+          </div>
+          <div class="extra__wrapper">
             <ul class="extra__list">
               <li class="extra__item ">
                 <div class="extra__container">
@@ -251,11 +257,11 @@
                 </div>
               </li>
             </ul>
-          </div>
-        </section>
-        <section class="present">
-          <div class="present__wrapper">
-            <p class="present__slogan">Закажите все и получите чехол для кота в подарок!</p>
+            <div class="present">
+              <div class="present__wrapper">
+                <p class="present__slogan">Закажите все и получите чехол для кота в подарок!</p>
+              </div>
+            </div>
           </div>
         </section>
       </div>

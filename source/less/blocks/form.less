@@ -1,6 +1,189 @@
 .form {
   &__field {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
     border: none;
     .form-text;
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .form {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    &__wrapper {
+      display: flex;
+    }
+  }
+}
+
+
+.field-cat {
+  display: flex;
+  flex-direction: column;
+
+  &__row {
+    height: 50px;
+    border: 1px solid @main-gray;
+    flex-grow: 2;
+  }
+
+  &__name {
+    padding-bottom: 25px;
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__weigth {
+    padding-bottom: 25px;
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__age {
+    padding-bottom: 25px;
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .field-cat {
+    width: 50%;
+  }
+}
+
+.field-target {
+  &__weight-loss {
+    padding-bottom: 25px;
+  }
+
+  &__fat {
+    padding-bottom: 25px;
+  }
+
+  &__dont-know {
+    padding-bottom: 25px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .field-target {
+    width: 50%;
+  }
+}
+
+.field-owner {
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  &__e-mail {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__phone {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__row {
+    margin-bottom: 18px;
+    height: 50px;
+    border: 1px solid @main-gray;
+    flex-grow: 2;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .field-owner {
+    &__wrapper {
+      display: flex;
+    }
+
+    &__e-mail {
+      width: 50%;
+    }
+
+    &__phone {
+      width: 50%;
+    }
+  }
+}
+
+.field-comment {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    padding-bottom: 30px;
+  }
+
+  &__row {
+    width: 100%;
+    height: 145px;
+    border: 1px solid @main-gray;
+  }
+}
+
+.field-extra {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    padding-bottom: 30px;
+  }
+
+  &__sugar {
+    padding-bottom: 15px;
+  }
+
+  &__water {
+    padding-bottom: 15px;
+  }
+
+  &__milk {
+    padding-bottom: 15px;
+  }
+
+  &__vitamins {
+    padding-bottom: 15px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .field-extra {
+    &__wrapper {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    &__sugar {
+      width: 280px;
+    }
+
+    &__water {
+      width: 280px;
+    }
+
+    &__milk {
+      width: 280px;
+    }
+
+    &__vitamins {
+      width: 280px;
+    }
   }
 }

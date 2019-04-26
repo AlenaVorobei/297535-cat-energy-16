@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -26,37 +28,47 @@
       <div class="container">
         <section class="selection">
           <h1 class="selection__title">Подбор программы</h1>
-          <p class="selection__info">Заполните анкету и мы подберем программу питания для вашего кота </p>
           <form class="selection__form form" method="post" action="https://echo.htmlacademy.ru">
-            <fieldset class="form__field field-cat">
-              <legend class="visually-hidden">Данные кота</legend>
-              <label class="field-cat__name">Имя:*
-                <input class="field-cat__row" type="text" placeholder="Барсик" required>
-              </label>
-              <label class="field-cat__weigth">Вес (кг):*
-                <input class="field-cat__row" type="text" placeholder="7" required>
-              </label>
-              <label class="field-cat__age">Возраст (лет):
-                <input class="field-cat__row" type="text" placeholder="7">
-              </label>
-            </fieldset>
-            <fieldset class="form__field field-target">
-              <legend class="visually-hidden">Цель программы</legend>
-              <input type="radio" name="radio" id="weight-loss">
-              <label class="field-target__weight-loss" for="weight-loss">Похудение</label>
-              <input type="radio" name="radio" id="fat">
-              <label class="field-target__fat" for="fat">Набор массы</label>
-              <input type="radio" name="radio" id="dont-know">
-              <label class="field-target__dont-know" for="dont-know">Не знаю (нужен ваш совет)</label>
-            </fieldset>
+            <p class="selection__info">Заполните анкету и мы подберем программу питания для вашего кота </p>
+            <div class="form__wrapper">
+              <fieldset class="form__field field-cat">
+                <legend class="visually-hidden">Данные кота</legend>
+                <label class="field-cat__name">Имя:*
+                  <input class="field-cat__row field-cat__row--name" type="text" placeholder="Барсик" required>
+                </label>
+                <label class="field-cat__weigth">Вес (кг):*
+                  <input class="field-cat__row field-cat__row--weigth" type="text" placeholder="7" required>
+                </label>
+                <label class="field-cat__age">Возраст (лет):
+                  <input class="field-cat__row field-cat__row--age" type="text" placeholder="7">
+                </label>
+              </fieldset>
+              <fieldset class="form__field field-target">
+                <legend class="visually-hidden">Цель программы</legend>
+                <label class="field-target__weight-loss" for="weight-loss">
+                  <input type="radio" name="radio" id="weight-loss">
+                  Похудение
+                </label>
+                <label class="field-target__fat" for="fat">
+                  <input type="radio" name="radio" id="fat">
+                  Набор массы
+                </label>
+                <label class="field-target__dont-know" for="dont-know">
+                  <input type="radio" name="radio" id="dont-know">
+                  Не знаю (нужен ваш совет)
+                </label>
+              </fieldset>
+            </div>
             <fieldset class="form__field field-owner">
               <legend class="field-owner__title">Контактные данные (владельца кота)</legend>
-              <label class="field-owner__e-mail">E-mail:*
-                <input class="field-owner__row field-owner__row--mail-icon" type="email" placeholder="kuklachev@gmail.com" required>
-              </label>
-              <label class="field-owner__phone">Телефон:*
-                <input class="field-owner__row field-owner__row--phone-icon" type="tel" placeholder="8 (960) 900-60-90" required>
-              </label>
+              <div class="field-owner__wrapper">
+                <label class="field-owner__e-mail">E-mail:*
+                  <input class="field-owner__row field-owner__row--mail-icon" type="email" placeholder="kuklachev@gmail.com" required>
+                </label>
+                <label class="field-owner__phone">Телефон:*
+                  <input class="field-owner__row field-owner__row--phone-icon" type="tel" placeholder="8 (960) 900-60-90" required>
+                </label>
+              </div>
             </fieldset>
             <fieldset class="form__field field-comment">
               <legend class="field-comment__title">Комментарий</legend>
@@ -64,24 +76,32 @@
             </fieldset>
             <fieldset class="form__field field-extra">
               <legend class="field-extra__title">Дополнительно</legend>
-              <label class="field-extra__sugar">Сахарозаменитель
-                <input type="checkbox" id="sugar" name="sugar" checked>
-              </label>
-              <label class="field-extra__water">Питьевая вода
-                <input type="checkbox" id="water" name="water">
-              </label>
-              <label class="field-extra__milk">Молоко
-                <input type="checkbox" id="milk" name="milk">
-              </label>
-              <label class="field-extra__vitamins">Витамины
-                <input type="checkbox" id="vitamins" name="vitamins">
-              </label>
+              <div class="field-extra__wrapper">
+                <label class="field-extra__sugar">
+                  <input type="checkbox" id="sugar" name="sugar" checked>
+                  Сахарозаменитель
+                </label>
+                <label class="field-extra__water">
+                  <input type="checkbox" id="water" name="water">
+                  Питьевая вода
+                </label>
+                <label class="field-extra__milk">
+                  <input type="checkbox" id="milk" name="milk">
+                  Молоко
+                </label>
+                <label class="field-extra__vitamins">
+                  <input type="checkbox" id="vitamins" name="vitamins">
+                  Витамины
+                </label>
+              </div>
             </fieldset>
-            <button class="selection__button btn btn--primary" type="submit">Отправить заявку</button>
+            <div class="selection__submit">
+              <button class="selection__button btn btn--primary" type="submit">Отправить заявку</button>
+              <small class="selection__legend">
+              <sup>*</sup> — Обязательные поля
+              </small>
+            </div>
           </form>
-          <small class="selection__legend">
-            <sup>*</sup> — Обязательные поля
-          </small>
         </section>
       </div>
       <section class="contacts">

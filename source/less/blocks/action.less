@@ -1,4 +1,9 @@
 .action {
+  &__wrapper {
+    margin: 0 auto;
+    width: 280px;
+  }
+
   &__title {
     .title;
   }
@@ -6,9 +11,40 @@
   &__list {
     list-style: none;
     padding: 0;
+    margin-left: 80px;
   }
 
   &__item {
     .description;
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .action {
+    &__wrapper {
+      width: 708px;
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-left: 0;
+    }
+
+    &__item {
+      width: 300px;
+      margin-bottom: 130px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .action {
+    &__wrapper {
+      margin: 0 auto;
+      width: 1220px;
+    }
   }
 }
