@@ -1,4 +1,7 @@
 .selection {
+  width: 280px;
+  margin: 0 auto;
+
   &__title {
     .title;
   }
@@ -14,5 +17,31 @@
   &__legend {
     .description;
     line-height: 16px;
+  }
+
+  &__submit {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+  }
+
+  &__button {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .selection {
+    width: 708px;
+
+    &__submit {
+      flex-direction: row;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .selection {
+    width: 1220px;
   }
 }

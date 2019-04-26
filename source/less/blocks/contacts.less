@@ -1,4 +1,13 @@
 .contacts {
+  &__wrapper {
+    width: 280px;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+  }
+
   &__slogan {
     font-size: 16px;
     line-height: 20px;
@@ -9,5 +18,66 @@
   &__adress {
     .description;
     line-height: 20px;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__map {
+    height: 363px;
+    background-color: gray;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    &__wrapper {
+      width: 624px;
+      padding-left: 42px;
+      padding-right: 42px;
+    }
+
+    &__slogan {
+      width: 192px;
+    }
+
+    &__adress {
+      width: 192px;
+    }
+
+    &__map {
+      height: 400px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    position: relative;
+    width: 1220px;
+    margin: 0 auto;
+
+    &__wrapper {
+      background-color: white;
+      position: absolute;
+      bottom: 110px;
+      left: 0;
+      width: 440px;
+      padding-left: 76px;
+      padding-right: 88px;
+      padding-top: 65px;
+      padding-bottom: 65px;
+    }
+
+    &__slogan {
+      width: 160px;
+    }
+
+    &__adress {
+      width: 160px;
+    }
+
+    &__map {
+      height: 400px;
+    }
   }
 }

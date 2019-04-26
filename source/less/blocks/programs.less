@@ -1,4 +1,11 @@
 .programs {
+  &__wrapper {
+    margin: 0 auto;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+  }
+
   &__list {
     list-style: none;
     padding: 0;
@@ -25,5 +32,31 @@
 
   &__description {
     .description;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .programs {
+    &__wrapper {
+      width: 708px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programs {
+    &__wrapper {
+      width: 1300px;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    &__item {
+      width: 570px;
+    }
   }
 }

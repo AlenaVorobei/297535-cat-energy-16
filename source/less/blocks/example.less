@@ -1,12 +1,17 @@
 .example {
+  background-color: @main-gray;
+  color: #111111;
+  font-weight: 400;
+
   &__wrapper {
-    background-color: @main-gray;
-    color: #111111;
-    font-weight: 400;
+    margin: 0 auto;
+    width: 280px;
   }
 
   &__title {
     .title;
+    padding-top: 33px;
+    padding-bottom: 33px;
   }
 
   &__description {
@@ -16,6 +21,8 @@
   &__list {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: space-between;
   }
 
   &__value {
@@ -36,5 +43,46 @@
     .title;
     font-size: 14px;
     text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .example {
+    &__wrapper {
+      width: 708px;
+    }
+
+    &__first-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__list {
+      justify-content: flex-start;
+    }
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .example {
+    &__wrapper {
+      width: 1220px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__first-wrapper {
+      width: 570px;
+    }
+
+    &__second-wrapper {
+      width: 610px;
+    }
+
+    &__list {
+      justify-content: flex-start;
+    }
   }
 }

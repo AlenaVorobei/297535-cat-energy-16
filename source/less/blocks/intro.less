@@ -1,6 +1,13 @@
 .intro {
   color: white;
   background-color: @main-green;
+  width: 280px;
+  margin: 0 auto;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
 
   &__title {
     .title;
@@ -12,5 +19,24 @@
     line-height: 14px;
     font-weight: normal;
     text-transform: uppercase;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .intro {
+    color: #111111;
+    background-color: white;
+    width: 708px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .intro {
+    text-align: left;
+    width: 1220px;
+
+    &__image {
+      margin-left: auto;
+    }
   }
 }
