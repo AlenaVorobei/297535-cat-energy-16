@@ -1,6 +1,9 @@
 .form {
+  width: 280px;
+  margin: 0 auto;
+
   &__field {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -12,13 +15,17 @@
 
 @media (min-width: @tablet-width) {
   .form {
-    margin-left: 40px;
-    margin-right: 40px;
+    width: auto;
+    padding-left: 40px;
+    padding-right: 35px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .form {
+    padding: 0 40px;
+    margin: 0 auto;
+
     &__wrapper {
       display: flex;
     }
@@ -29,94 +36,224 @@
 .field-cat {
   display: flex;
   flex-direction: column;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
 
   &__row {
-    height: 50px;
+    margin-left: 15px;
+    padding-left: 15px;
+    height: 45px;
     border: 1px solid @main-gray;
     flex-grow: 2;
+    text-transform: uppercase;
   }
 
   &__name {
-    padding-bottom: 25px;
+    padding-bottom: 10px;
     display: flex;
-    align-items: baseline;
+    align-items: center;
   }
 
   &__weigth {
-    padding-bottom: 25px;
+    padding-bottom: 10px;
     display: flex;
-    align-items: baseline;
+    align-items: center;
   }
 
   &__age {
-    padding-bottom: 25px;
+    padding-bottom: 10px;
     display: flex;
-    align-items: baseline;
+    align-items: center;
   }
 }
 
+@media (min-width: @tablet-width) {
+  .field-cat {
+    font-size: 20px;
+    padding-bottom: 0;
+    margin-bottom: 55px;
+
+    &__row {
+      margin-left: 20px;
+      padding-left: 18px;
+    }
+
+    &__name {
+      padding-bottom: 22px;
+    }
+
+    &__weigth {
+      padding-bottom: 22px;
+    }
+
+    &__age {
+      padding-bottom: 22px;
+    }
+  }
+}
 
 @media (min-width: @desktop-width) {
   .field-cat {
     width: 50%;
+    padding-right: 73px;
+    padding-top: 20px;
+    margin-bottom: 53px;
   }
 }
 
 .field-target {
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  padding-top: 25px;
+
   &__weight-loss {
     padding-bottom: 25px;
+    padding-left: 30px;
   }
 
   &__fat {
     padding-bottom: 25px;
+    padding-left: 30px;
   }
 
   &__dont-know {
     padding-bottom: 25px;
+    padding-left: 30px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .field-target {
+    border: 1px solid #e6e6e6;
+    padding-top: 35px;
+    font-size: 20px;
+
+    &__weight-loss {
+      padding-bottom: 35px;
+      padding-left: 70px;
+    }
+
+    &__fat {
+      padding-bottom: 35px;
+      padding-left: 70px;
+    }
+
+    &__dont-know {
+      padding-bottom: 35px;
+      padding-left: 70px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .field-target {
     width: 50%;
+    margin-top: 20px;
+    margin-bottom: 75px;
+    padding-top: 30px;
   }
 }
 
 .field-owner {
   display: flex;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
+  width: 280px;
+  margin: 0 auto;
+
+  &__title {
+    text-transform: none;
+    font-size: 24px;
+    line-height: 24px;
+  }
 
   &__e-mail {
     display: flex;
     align-items: baseline;
+    text-transform: uppercase;
   }
 
   &__phone {
     display: flex;
     align-items: baseline;
+    text-transform: uppercase;
   }
 
   &__row {
-    margin-bottom: 18px;
-    height: 50px;
+    margin-bottom: 14px;
+    padding-left: 15px;
+    height: 43px;
     border: 1px solid @main-gray;
     flex-grow: 2;
+    margin-left: 15px;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .field-owner {
+    width: auto;
+    margin-top: 80px;
+    margin-bottom: 45px;
+
+    &__title {
+      font-size: 36px;
+      margin-bottom: 50px;
+    }
+
+    &__e-mail {
+      font-size: 20px;
+      padding-bottom: 5px;
+    }
+
+    &__phone {
+      font-size: 20px;
+    }
+
+    &__row {
+      height: 48px;
+      font-size: 20px;
+      margin-left: 18px;
+      padding-left: 20px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .field-owner {
+    margin-top: 0;
+    margin-left: -40px;
+    margin-right: -40px;
+
+    &__title {
+      font-size: 36px;
+      margin-left: 40px;
+    }
+
     &__wrapper {
       display: flex;
     }
 
+    &__row {
+      margin-left: 19px;
+      padding-left: 18px;
+    }
+
     &__e-mail {
       width: 50%;
+      margin-right: 40px;
+      margin-left: 40px;
+    }
+
+    &__row--phone-icon {
+      padding-left: 15px;
     }
 
     &__phone {
       width: 50%;
+      margin-right: 40px;
+      margin-left: 40px;
     }
   }
 }
@@ -124,42 +261,109 @@
 .field-comment {
   display: flex;
   flex-direction: column;
+  width: 280px;
+  margin: 0 auto 25px;
 
   &__title {
-    padding-bottom: 30px;
+    padding-bottom: 35px;
+    text-transform: none;
+    font-size: 24px;
+    line-height: 24px;
   }
 
   &__row {
-    width: 100%;
-    height: 145px;
+    width: 264px;
+    height: 133px;
     border: 1px solid @main-gray;
+    padding-top: 13px;
+    padding-left: 14px;
+    text-transform: uppercase;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .field-comment {
+    width: 708px;
+    margin: 0 auto;
+    margin-bottom: 73px;
+
+    &__title {
+      font-size: 36px;
+      padding-bottom: 80px;
+    }
+
+    &__row {
+      font-size: 20px;
+      width: 614px;
+      height: 155px;
+      border: 1px solid @main-gray;
+      padding-top: 13px;
+      padding-left: 18px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .field-comment {
+    width: auto;
+    margin: 0 auto;
+    margin-bottom: 73px;
+
+    &__title {
+      font-size: 36px;
+      padding-bottom: 80px;
+    }
+
+    &__row {
+      font-size: 20px;
+      width: 1220px;
+      height: 155px;
+      border: 1px solid @main-gray;
+      padding-top: 13px;
+      padding-left: 18px;
+      text-transform: uppercase;
+    }
+  }
+}
+
 
 .field-extra {
   &__wrapper {
     display: flex;
     flex-direction: column;
+    margin-bottom: 12px;
   }
 
   &__title {
-    padding-bottom: 30px;
+    padding-bottom: 45px;
+    text-transform: none;
+    font-size: 24px;
+    line-height: 24px;
   }
 
-  &__sugar {
-    padding-bottom: 15px;
+  &__checkbox-wrapper {
+    padding-bottom: 23px;
   }
 
-  &__water {
-    padding-bottom: 15px;
+  &__checkbox--sugar {
+    padding-left: 45px;
   }
 
-  &__milk {
-    padding-bottom: 15px;
+  &__checkbox--water {
+    padding-left: 45px;
   }
 
-  &__vitamins {
-    padding-bottom: 15px;
+  &__checkbox--milk {
+    padding-left: 45px;
+  }
+
+  &__checkbox--vitamins {
+    padding-left: 45px;
+  }
+
+  &__checkbox--content {
+    display: none;
   }
 }
 
@@ -168,22 +372,90 @@
     &__wrapper {
       flex-direction: row;
       flex-wrap: wrap;
+      justify-content: space-between;
+      padding-left: 0;
+      margin-bottom: 10px;
     }
 
-    &__sugar {
-      width: 280px;
+    &__title {
+      padding-bottom: 68px;
+      text-transform: none;
+      font-size: 36px;
     }
 
-    &__water {
-      width: 280px;
+    &__checkbox-wrapper {
+      flex: 0 0 40%;
+      width: 40%;
+      padding-right: 35px;
+      margin-bottom: 53px;
     }
 
-    &__milk {
-      width: 280px;
+    &__checkbox--sugar {
+      font-size: 20px;
+      padding-top: 10px;
+      padding-left: 60px;
     }
 
-    &__vitamins {
-      width: 280px;
+    &__checkbox--water {
+      font-size: 20px;
+      padding-left: 60px;
+      padding-top: 10px;
+    }
+
+    &__checkbox--milk {
+      font-size: 20px;
+      padding-left: 60px;
+      margin-top: 10px;
+    }
+
+    &__checkbox--vitamins {
+      font-size: 20px;
+      margin-top: 10px;
+      padding-left: 60px;
+    }
+
+    &__checkbox--content {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .field-extra {
+    &__wrapper {
+      width: 1220px;
+      flex-wrap: nowrap;
+    }
+
+    &__checkbox-wrapper {
+      flex: 0 0 25%;
+      width: 25%;
+      padding-right: 20px;
+      margin-bottom: 60px;
+    }
+
+    &__checkbox--sugar {
+      font-size: 20px;
+      padding-top: 10px;
+      padding-left: 60px;
+    }
+
+    &__checkbox--water {
+      font-size: 20px;
+      padding-left: 60px;
+      padding-top: 10px;
+    }
+
+    &__checkbox--milk {
+      font-size: 20px;
+      padding-left: 60px;
+      margin-top: 10px;
+    }
+
+    &__checkbox--vitamins {
+      font-size: 20px;
+      margin-top: 10px;
+      padding-left: 60px;
     }
   }
 }

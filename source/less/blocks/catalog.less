@@ -9,6 +9,9 @@
   &__title-wrapper {
     width: 280px;
     margin: 0 auto;
+    padding-top: 27px;
+    padding-bottom: 38px;
+    border-bottom: 1px solid #e6e6e6;
   }
 
   &__title {
@@ -26,6 +29,14 @@
 
     &__title-wrapper {
       width: 708px;
+      border: none;
+      padding-top: 45px;
+      padding-bottom: 57px;
+    }
+
+    &__title {
+      font-size: 60px;
+      line-height: 60px;
     }
   }
 }
@@ -39,6 +50,8 @@
 
     &__title-wrapper {
       width: 1220px;
+      padding-top: 75px;
+      padding-bottom: 50px;
     }
   }
 }
@@ -51,20 +64,29 @@
     padding: 25px 0;
     width: 280px;
     margin: 0 auto;
+    border-bottom: 1px solid #e6e6e6;
   }
 
   &__plus {
     margin: 0 auto;
+    font-size: 30px;
   }
 
   &__title {
     .title-product;
     margin: 0 auto;
+    padding-top: 22px;
   }
 
   &__slogan {
     .product-table;
     margin: 0 auto;
+    padding-top: 8px;
+    padding-bottom: 18px;
+  }
+
+  &__show {
+    padding: 10px 15px;
   }
 }
 
@@ -75,9 +97,34 @@
       flex-direction: column;
       flex-wrap: wrap;
       padding: 40px;
-      width: 242px;
       margin: 30px;
+      margin-top: 107px;
       border: 1px solid @main-gray;
+      text-align: center;
+      width: 242px;
+    }
+
+    &__plus {
+      margin: 35px auto 20px;
+      font-size: 30px;
+    }
+
+    &__title {
+      margin: 36px 40px 19px;
+      font-size: 20px;
+      line-height: 20px;
+      padding-top: 0;
+    }
+
+    &__slogan {
+      font-size: 16px;
+      padding-top: 0;
+      padding-bottom: 68px;
+      margin: 10px 20px 19px;
+    }
+
+    &__show {
+      padding: 10px 15px;
     }
   }
 }
@@ -86,6 +133,15 @@
   .more {
     &__wrapper {
       width: 163px;
+      margin: 40px;
+      margin-top: 110px;
+      margin-bottom: 27px;
+      border: 1px solid @main-gray;
+      text-align: center;
+    }
+
+    &__title {
+      margin: 40px auto 25px;
     }
   }
 }

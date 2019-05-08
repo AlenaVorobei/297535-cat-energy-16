@@ -1,24 +1,42 @@
 .intro {
   color: white;
-  background-color: @main-green;
-  width: 280px;
-  margin: 0 auto;
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  /*background-color: @main-green;*/
+  text-align: center;
 
   &__wrapper {
     display: flex;
     flex-direction: column;
+    width: 280px;
+    margin: 0 auto;
   }
 
   &__title {
     .title;
+    margin: 0;
     color: inherit;
+    padding-top: 26px;
   }
 
   &__slogan {
+    padding-top: 26px;
+    padding-bottom: 28px;
     font-size: 14px;
     line-height: 14px;
     font-weight: normal;
     text-transform: uppercase;
+  }
+
+  &__image {
+    padding-bottom: 3px;
+  }
+
+  &__button {
+    width: 280px;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 400;
   }
 }
 
@@ -27,6 +45,46 @@
     color: #111111;
     background-color: white;
     width: 708px;
+    background-image: none;
+    text-align: left;
+
+    &__wrapper {
+      width: 708px;
+      margin: 0 auto;
+    }
+
+    &__title {
+      padding-left: 117px;
+      font-size: 60px;
+      line-height: 60px;
+      padding-top: 47px;
+      width: 430px;
+    }
+
+    &__slogan {
+      padding-left: 117px;
+      font-size: 20px;
+      line-height: 20px;
+      padding-top: 40px;
+      padding-bottom: 49px;
+      position: relative;
+    }
+
+    &__image {
+      position: absolute;
+      width: 709px;
+      left: 28px;
+      top: 340px;
+    }
+
+    &__button {
+      margin-left: 117px;
+      z-index: 10;
+      width: 245px;
+      padding: 16px 0;
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 }
 
@@ -34,9 +92,35 @@
   .intro {
     text-align: left;
     width: 1220px;
+    margin: 0 auto;
+    background-color: transparent;
+
+    &__wrapper {
+      position: relative;
+      width: 1220px;
+      margin: 0 auto;
+    }
+
+    &__title {
+      padding-left: 80px;
+      padding-top: 107px;
+    }
+
+    &__slogan {
+      padding-left: 80px;
+      padding-top: 42px;
+      padding-bottom: 52px;
+    }
+
+    &__button {
+      margin-left: 80px;
+    }
 
     &__image {
-      margin-left: auto;
+      position: absolute;
+      width: 552px;
+      left: 450px;
+      top: 25px;
     }
   }
 }

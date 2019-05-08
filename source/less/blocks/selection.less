@@ -1,9 +1,12 @@
 .selection {
   width: 280px;
-  margin: 0 auto;
+  margin: 0 auto 60px;
+
 
   &__title {
     .title;
+    margin-top: 27px;
+    margin-bottom: 25px;
   }
 
   &__info {
@@ -12,36 +15,132 @@
     line-height: 18px;
     color: #444444;
     text-transform: uppercase;
+    margin-top: 40px;
+    margin-bottom: 20px;
   }
 
   &__legend {
     .description;
     line-height: 16px;
+    text-align: center;
   }
 
   &__submit {
     display: flex;
     flex-direction: column;
-    width: 280px;
+    width: auto;
   }
 
   &__button {
-    margin-bottom: 20px;
+    margin-top: 8px;
+    margin-bottom: 18px;
+    border: none;
+    padding: 11px 0;
+    width: 100%;
   }
 }
 
 @media (min-width: @tablet-width) {
   .selection {
     width: 708px;
+    margin: 0 auto;
+    padding-bottom: 55px;
+
+    &__title {
+      font-size: 60px;
+      line-height: 60px;
+      margin-top: 40px;
+      margin-bottom: 25px;
+      margin-left: 40px;
+    }
+
+    &__info {
+      width: 708px;
+      margin: 0 auto;
+      margin-right: 330px;
+      margin-left: 0;
+      font-size: 20px;
+      line-height: 30px;
+      margin-top: 60px;
+      margin-bottom: 50px;
+    }
 
     &__submit {
       flex-direction: row;
+      justify-content: space-between;
+      padding-left: 0;
+      padding-right: 70px;
+    }
+
+    &__legend {
+      font-size: 16px;
+      line-height: 16px;
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding-left: 60px;
+      padding-right: 30px;
+      margin: 13px 0;
+      text-align: left;
+    }
+
+    &__button-wrapper {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    &__button {
+      font-size: 20px;
+      margin-bottom: 18px;
+      border: none;
+      padding: 16px 20px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .selection {
-    width: 1220px;
+    width: 1300px;
+    padding-bottom: 60px;
+
+    &__title {
+      margin-top: 70px;
+    }
+
+    &__info {
+      width: 1220px;
+      margin: 0 auto;
+      margin-left: 0;
+      font-size: 20px;
+      line-height: 30px;
+      margin-top: 55px;
+      margin-bottom: 50px;
+    }
+
+    &__button-wrapper {
+      flex: 0 0 50%;
+      max-width: 50%;
+      font-size: 20px;
+      padding-right: 30px;
+    }
+
+    &__legend {
+      font-size: 16px;
+      line-height: 16px;
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding-left: 47px;
+      padding-right: 30px;
+      margin: 15px 0;
+      text-align: left;
+    }
+
+    &__button {
+      display: inline-block;
+      width: 100%;
+      font-size: 20px;
+      margin-bottom: 18px;
+      border: none;
+      padding: 16px 20px;
+    }
   }
 }

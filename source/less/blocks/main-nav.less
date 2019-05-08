@@ -1,4 +1,5 @@
 .main-nav {
+  position: relative;
   list-style: none;
   font-weight: 700;
   font-size: 20px;
@@ -6,6 +7,75 @@
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__toggle {
+    position: absolute;
+    top: -69px;
+    right: 0;
+    z-index: 2;
+    display: block;
+    width: 62px;
+    height: 64px;
+    background-color: white;
+    cursor: pointer;
+    border: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  right: 20px;
+  width: 24px;
+  height: 2px;
+  background-color: #222222;
+  box-shadow: 0 8px 0 0 #222222, 0 16px 0 0 #222222;
+}
+
+.main-nav--opened .main-nav__toggle {
+  position: absolute;
+  top: -65px;
+  right: -2px;
+  left: auto;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 30px;
+    right: 23px;
+
+    width: 24px;
+    height: 2px;
+
+    background-color: #222222;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .site-menu__item {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -18,7 +88,11 @@
 
 @media (min-width: @desktop-width) {
   .main-nav {
-    align-self: flex-end;
+    align-self: center;
+
+    &__toggle {
+      display: none;
+    }
   }
 }
 
@@ -29,9 +103,21 @@
   width: 320px;
   margin: 0 auto;
 
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    padding-top: 23px;
+    padding-bottom: 22px;
+    text-align: center;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
   &__link {
     text-decoration: none;
-    color: black;
+    color: #111111;
   }
 }
 
@@ -40,15 +126,39 @@
     flex-direction: row;
     justify-content: space-between;
     width: 440px;
+
+    &__link {
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    &__item {
+      padding-top: 42px;
+      padding-bottom: 22px;
+      border: none;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .site-menu {
-    background-color: @main-green;
+    width: 480px;
+    margin-left: auto;
 
     &__link {
+      color: #222222;
+      font-size: 20px;
+      line-height: 25px;
+    }
+
+    &__link--index {
       color: white;
+    }
+
+    &__item {
+      padding-top: 0;
+      padding-bottom: 0;
+      border: none;
     }
   }
 }
