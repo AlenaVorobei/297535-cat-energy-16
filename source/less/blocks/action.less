@@ -1,41 +1,95 @@
 .action {
   &__wrapper {
     margin: 0 auto;
-    width: 280px;
+    width: 320px;
   }
 
   &__title {
     .title;
+    margin: 0;
+    padding-top: 30px;
+    padding-left: 20px;
   }
 
   &__list {
+    display: flex;
+    flex-direction: column;
     list-style: none;
-    padding: 0;
-    margin-left: 80px;
+    padding-top: 43px;
+    padding-left: 0;
+    margin: 0;
   }
 
   &__item {
     .description;
-    margin-bottom: 30px;
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__item::before {
+    content: "";
+    display: block;
+    flex-shrink: 0;
+    margin-right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #68b738;
+    background-size: 50px;
+  }
+
+  &__text {
+    margin: 0;
   }
 }
 
 @media (min-width: @tablet-width) {
   .action {
     &__wrapper {
-      width: 708px;
+      width: 768px;
+    }
+
+    &__title {
+      font-size: 60px;
+      line-height: 60px;
+      padding-top: 45px;
+      padding-left: 30px;
     }
 
     &__list {
       display: flex;
+      flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
-      margin-left: 0;
+      align-content: center;
+      padding-right: 84px;
+      padding-top: 73px;
     }
 
     &__item {
-      width: 300px;
-      margin-bottom: 130px;
+      flex-direction: column;
+      font-size: 16px;
+      line-height: 24px;
+      padding-left: 30px;
+      padding-right: 30px;
+      margin-bottom: 120px;
+    }
+
+    &__item::before {
+      content: "";
+      display: block;
+      flex-shrink: 0;
+      margin-right: 20px;
+      width: 80px;
+      height: 80px;
+      background-color: #68b738;
+      margin-bottom: 30px;
+    }
+
+    &__text {
+      margin: 0;
+      max-width: 240px;
     }
   }
 }
@@ -44,7 +98,22 @@
   .action {
     &__wrapper {
       margin: 0 auto;
-      width: 1220px;
+      width: 1300px;
+    }
+
+    &__list {
+      padding-right: 0;
+    }
+
+    &__title {
+      padding-top: 73px;
+      padding-left: 40px;
+    }
+
+    &__item {
+      padding-left: 40px;
+      padding-right: 44px;
+      margin-bottom: 120px;
     }
   }
 }

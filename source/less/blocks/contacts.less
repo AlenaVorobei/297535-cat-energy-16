@@ -1,25 +1,30 @@
 .contacts {
   &__wrapper {
-    width: 280px;
-    margin: 0 auto;
-    margin-top: 25px;
+    width: 320px;
+    margin: 0;
+    margin-top: 27px;
     margin-bottom: 25px;
     display: flex;
     justify-content: space-between;
   }
 
   &__slogan {
+    width: 50%;
     font-size: 16px;
     line-height: 20px;
     color: #111111;
     text-transform: uppercase;
+    padding-left: 17px;
   }
 
   &__adress {
     .description;
+    width: 50%;
     line-height: 20px;
     padding: 0;
     margin: 0;
+    max-width: 160px;
+    padding-right: 25px;
   }
 
   &__map {
@@ -31,17 +36,23 @@
 @media (min-width: @tablet-width) {
   .contacts {
     &__wrapper {
-      width: 624px;
-      padding-left: 42px;
-      padding-right: 42px;
+      margin: 0;
+      width: 630px;
+      padding: 65px 65px 60px 75px;
     }
 
     &__slogan {
+      font-size: 20px;
+      line-height: 25px;
       width: 192px;
     }
 
     &__adress {
+      font-size: 16px;
+      line-height: 20px;
       width: 192px;
+      text-align: right;
+      margin-left: auto;
     }
 
     &__map {
@@ -59,21 +70,23 @@
     &__wrapper {
       background-color: white;
       position: absolute;
-      bottom: 110px;
+      bottom: 102px;
       left: 0;
       width: 440px;
       padding-left: 76px;
-      padding-right: 88px;
-      padding-top: 65px;
-      padding-bottom: 65px;
+      padding-right: 53px;
+      padding-top: 63px;
+      padding-bottom: 60px;
     }
 
     &__slogan {
-      width: 160px;
+      width: 165px;
     }
 
     &__adress {
       width: 160px;
+      text-align: left;
+      padding-right: 30px;
     }
 
     &__map {

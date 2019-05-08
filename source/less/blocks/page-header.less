@@ -2,20 +2,65 @@
   background-color: white;
   display: flex;
   flex-direction: column;
-  width: 280px;
+  width: 320px;
   margin: 0 auto;
+
+  &__logo {
+    border: 1px solid #e6e6e6;
+  }
 }
+
+.image {
+  width: 191px;
+  padding: 11px 0 11px 18px;
+  border: none;
+}
+
 
 @media (min-width: @tablet-width) {
   .page-header {
     flex-direction: row;
     width: 708px;
     justify-content: space-between;
+
+    &__logo {
+      border: none;
+    }
+  }
+
+  .image {
+    width: 174px;
+    padding: 21px 0 11px 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header {
     width: 1220px;
+    padding-top: 53px;
+    background-color: transparent;
+  }
+
+  .image {
+    width: 203px;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .page-header--index::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    min-height: 696px;
+    top: 0;
+    right: 0;
+    left: inherit;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-color: #63a73a;
+    background-position: 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
   }
 }

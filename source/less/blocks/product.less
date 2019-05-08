@@ -2,8 +2,11 @@
   &__item {
     display: flex;
     flex-wrap: wrap;
-    padding: 25px 0;
+    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 22px;
     width: 280px;
+    border-bottom: 1px solid #e6e6e6;
   }
 
   &__image {
@@ -11,6 +14,7 @@
     flex-shrink: 0;
     flex-basis: 50%;
     max-width: 50%;
+    margin-top: -20px;
   }
 
   &__description {
@@ -26,12 +30,14 @@
   }
 
   &__order {
-    margin-top: 25px;
+    margin-top: 0;
     width: 280px;
+    padding: 10px 15px;
   }
 
   &__options {
     .product-table;
+    width: 140px;
   }
 }
 
@@ -39,15 +45,53 @@
   .product {
     &__item {
       flex-direction: column;
+      align-items: center;
       padding: 40px;
       width: 244px;
-      background: #f2f2f2;
+      background-color: #f2f2f2;
       margin: 30px;
       margin-top: 110px;
     }
 
+    &__title {
+      font-size: 20px;
+      line-height: 20px;
+      max-width: 130px;
+      width: 100%;
+      margin: 34px auto 20px;
+      text-align: center;
+    }
+
+    &__options {
+      margin-bottom: 31px;
+      border-collapse: collapse;
+      font-size: 16px;
+      line-height: 16px;
+      width: 244px;
+    }
+
+    &__image {
+      flex: 0 0 auto;
+      max-width: inherit;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: center;
+      min-height: 213px;
+      margin: -126px -40px 0;
+    }
+
+    &__description {
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
     &__order {
-      width: 250px;
+      width: 214px;
+      margin: 0 auto;
     }
   }
 }
@@ -57,10 +101,43 @@
     &__item {
       width: 165px;
       margin: 40px;
+      margin-top: 110px;
+      margin-bottom: 28px;
+    }
+
+    &__title {
+      margin: 37px auto 20px;
     }
 
     &__order {
+      width: 140px;
+      padding: 10px 15px;
+    }
+
+    &__options {
       width: 170px;
+    }
+  }
+}
+
+.table {
+  &__value {
+    text-align: right;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .table {
+    &__line {
+      border-bottom: 1px solid #cdcdcd;
+    }
+
+    &__field {
+      padding: 8px 0;
+    }
+
+    &__value {
+      padding: 8px 0;
     }
   }
 }

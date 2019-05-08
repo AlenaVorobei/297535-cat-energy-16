@@ -22,19 +22,41 @@
     line-height: 24px;
     font-weight: normal;
     color: #111111;
+    margin: 0;
+    padding-top: 28px;
+    padding-bottom: 34px;
+    border-bottom: 1px solid #e6e6e6;
   }
 
   &__list {
     list-style: none;
     padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 16px;
+    padding-top: 13px;
   }
 
   &__name {
     .title-product;
+    margin: 0;
+    padding-bottom: 10px;
   }
 
   &__options {
     .product-table;
+    padding-bottom: 7px;
+  }
+
+  &__price {
+    text-align: right;
+  }
+
+  &__order {
+    padding: 10px 15px;
   }
 }
 
@@ -44,13 +66,58 @@
       width: 708px;
     }
 
+    &__list {
+      margin-bottom: 70px;
+    }
+
+    &__title {
+      font-size: 36px;
+      padding-top: 40px;
+      padding-bottom: 85px;
+      margin-left: 40px;
+      border: none;
+    }
+
+    &__second-wrapper {
+      display: flex;
+      padding-bottom: 13px;
+    }
+
     &__wrapper {
       width: 708px;
     }
 
     &__item {
-      padding-left: 40px;
-      padding-right: 40px;
+      border: 1px solid #e6e6e6;
+      padding-top: 25px;
+      padding-bottom: 28px;
+      padding-left: 37px;
+      padding-right: 37px;
+    }
+
+    &__name {
+      font-size: 20px;
+      padding-bottom: 0;
+    }
+
+    &__options {
+      margin-left: auto;
+      font-size: 16px;
+      line-height: 20px;
+      width: 290px;
+    }
+
+    &__volume {
+      text-align: right;
+      width: 134px;
+    }
+
+    &__price {
+      width: 60px;
+    }
+
+    &__order {
+      padding: 9px 15px;
     }
   }
 }
@@ -58,36 +125,146 @@
 @media (min-width: @desktop-width) {
   .extra {
     &__title-wrapper {
-      width: 1220px;
+      width: 1300px;
       margin: 0 auto;
     }
 
+    &__title {
+      padding-top: 23px;
+      padding-bottom: 90px;
+    }
+
+    &__list {
+      margin-right: 40px;
+    }
+
     &__wrapper {
-      width: 1300px;
+      width: 1220px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
     }
 
+    &__second-wrapper {
+      padding: 0;
+      width: 70%;
+      justify-content: space-between;
+    }
+
+    &__options {
+      width: 48%;
+      padding-bottom: 0;
+      /*margin-left: 40px;*/
+    }
+
+    &__volume {
+      text-align: left;
+    }
+
     &__container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    &__item {
+      padding: 15px 0;
+      border-left: none;
+      border-right: none;
+      width: 895px;
+    }
+
+    &__order {
+      width: 215px;
+      padding: 10px 15px;
+    }
+  }
+}
+
+
+.present {
+  font-family: "Arial", "Tahoma", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 63px 10px;
+  padding-bottom: 45px;
+  text-align: center;
+  color: white;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: @main-green;
+  background-size: cover;
+  margin-top: 40px;
+  margin-bottom: 35px;
+
+  &__image {
+    fill: white;
+    width: 56px;
+  }
+
+  &__slogan {
+    margin: 0;
+    width: 150px;
+    padding-top: 57px;
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .present {
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    margin: 0;
+    margin-bottom: 76px;
+    padding: 0;
+
+    &__wrapper {
+      width: 528px;
+      display: flex;
+      padding: 70px 90px;
       flex-direction: row;
       justify-content: space-between;
     }
 
-    &__item {
-      width: 895px;
-      padding: 0;
-      margin: 40px;
+    &__image {
+      fill: white;
+      width: 56px;
+      height: 61px;
+    }
+
+    &__slogan {
+      text-align: left;
+      margin: 0;
+      width: 150px;
+      padding-top: 0;
+      padding-right: 40px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .present {
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    margin-bottom: 85px;
+
     &__wrapper {
-      width: 245px;
-      margin-left: 40px;
-      margin-right: 40px;
+      flex-direction: column;
+      width: 155px;
+      margin: 0;
+      padding: 45px;
+      padding-top: 60px;
+      align-items: center;
+    }
+
+    &__slogan {
+      text-align: center;
+      margin: 0;
+      width: 150px;
+      padding: 0;
+      padding-top: 62px;
     }
   }
 }
