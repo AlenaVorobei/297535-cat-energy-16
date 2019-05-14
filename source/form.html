@@ -11,9 +11,9 @@
     <header class="page-header">
       <a class="page-header__logo">
         <picture>
-          <source media="(min-width: 1300px)" srcset="../img/logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="../img/logo-tablet.svg">
-          <img class="page-header__logo image" src="../img/logo-mobile.svg" alt="Логотип Кэт Энерджи">
+          <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="page-header__logo image" src="img/logo-mobile.svg" alt="Логотип Кэт Энерджи">
         </picture>
       </a>
       <nav class="main-nav main-nav--closed main-nav--nojs">
@@ -34,36 +34,42 @@
           <form class="selection__form form" method="post" action="https://echo.htmlacademy.ru">
             <p class="selection__info">Заполните анкету и мы подберем программу питания для вашего кота </p>
             <div class="form__wrapper">
-              <fieldset class="form__field field-cat">
-                <legend class="visually-hidden">Данные кота</legend>
-                <label class="field-cat__name">Имя:*
-                  <input class="field-cat__row field-cat__row--name" type="text" placeholder="Барсик" required>
-                </label>
-                <label class="field-cat__weigth">Вес (кг):*
-                  <input class="field-cat__row field-cat__row--weigth" type="text" placeholder="7" required>
-                </label>
-                <label class="field-cat__age">Возраст (лет):
-                  <input class="field-cat__row field-cat__row--age" type="text" placeholder="7">
-                </label>
-              </fieldset>
-              <fieldset class="form__field field-target">
-                <legend class="visually-hidden">Цель программы</legend>
-                <label class="field-target__weight-loss" for="weight-loss">
-                  <input type="radio" name="radio" id="weight-loss">
-                  Похудение
-                </label>
-                <label class="field-target__fat" for="fat">
-                  <input type="radio" name="radio" id="fat">
-                  Набор массы
-                </label>
-                <label class="field-target__dont-know" for="dont-know">
-                  <input type="radio" name="radio" id="dont-know">
-                  Не знаю (нужен ваш совет)
-                </label>
-              </fieldset>
+              <div class="form__field-wrapper">
+                <fieldset class="form__field field-cat">
+                  <legend class="visually-hidden">Данные кота</legend>
+                  <label class="field-cat__name">Имя:*
+                    <input class="field-cat__row field-cat__row--name" type="text" placeholder="Барсик" required>
+                  </label>
+                  <label class="field-cat__weigth">Вес (кг):*
+                    <input class="field-cat__row field-cat__row--weigth" type="text" placeholder="7" required>
+                  </label>
+                  <label class="field-cat__age">Возраст (лет):
+                    <input class="field-cat__row field-cat__row--age" type="text" placeholder="7">
+                  </label>
+                </fieldset>
+              </div>
+              <div class="form__field-wrapper">
+                <fieldset class="form__field field-target">
+                  <legend class="visually-hidden">Цель программы</legend>
+                  <label class="field-target__weight-loss" for="weight-loss">
+                    <input type="radio" name="radio" id="weight-loss">
+                    Похудение
+                  </label>
+                  <label class="field-target__fat" for="fat">
+                    <input type="radio" name="radio" id="fat">
+                    Набор массы
+                  </label>
+                  <label class="field-target__dont-know" for="dont-know">
+                    <input type="radio" name="radio" id="dont-know">
+                    Не знаю (нужен ваш совет)
+                  </label>
+                </fieldset>
+              </div>
             </div>
             <fieldset class="form__field field-owner">
-              <legend class="field-owner__title">Контактные данные (владельца кота)</legend>
+              <div class="field-owner__title-wrapper">
+                <legend class="field-owner__title">Контактные данные (владельца кота)</legend>
+              </div>
               <div class="field-owner__wrapper">
                 <label class="field-owner__e-mail">E-mail:*
                   <input class="field-owner__row field-owner__row--mail-icon" type="email" placeholder="kuklachev@gmail.com" required>
@@ -74,11 +80,15 @@
               </div>
             </fieldset>
             <fieldset class="form__field field-comment">
-              <legend class="field-comment__title">Комментарий</legend>
+              <div class="field-comment__title-wrapper">
+                <legend class="field-comment__title">Комментарий</legend>
+              </div>
               <textarea class="field-comment__row" name="comment" required>Расскажите обо всех повадках кота</textarea>
             </fieldset>
             <fieldset class="form__field field-extra">
-              <legend class="field-extra__title">Дополнительно</legend>
+              <div class="field-extra__title-wrapper">
+                <legend class="field-extra__title">Дополнительно</legend>
+              </div>
               <div class="field-extra__wrapper">
                 <div class="field-extra__checkbox-wrapper">
                   <label class="field-extra__checkbox field-extra__checkbox--sugar" for="sugar">
@@ -118,12 +128,15 @@
         </section>
       </div>
       <section class="contacts">
-        <div class="contacts__wrapper">
-          <h2 class="visually-hidden">Контакты</h2>
-          <b class="contacts__slogan">Приглашаем <br>к сотрудничеству дилеров!</b>
-          <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <div class="contacts__container">
+          <div class="contacts__wrapper contacts__wrapper--form">
+            <h2 class="visually-hidden">Контакты</h2>
+            <b class="contacts__slogan">Приглашаем <br>к сотрудничеству дилеров!</b>
+            <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          </div>
         </div>
-        <div class="contacts__map">
+        <div class="contacts__map-wrapper">
+          <iframe class="contacts__map"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651609!2d30.3208946163521!3d59.93879418187622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1557604190591!5m2!1sru!2sru" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
       </section>
     </main>

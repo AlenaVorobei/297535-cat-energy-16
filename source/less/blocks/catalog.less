@@ -1,16 +1,16 @@
 .catalog {
   &__wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    width: 280px;
     margin: 0 auto;
+    width: auto;
+    min-width: 260px;
   }
 
   &__title-wrapper {
-    width: 280px;
+    width: auto;
     margin: 0 auto;
     padding-top: 27px;
-    padding-bottom: 38px;
+    padding-left: 20px;
+    padding-bottom: 40px;
     border-bottom: 1px solid #e6e6e6;
   }
 
@@ -23,6 +23,8 @@
 @media (min-width: @tablet-width) {
   .catalog {
     &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
       width: 768px;
       margin: 0 auto;
     }
@@ -32,6 +34,7 @@
       border: none;
       padding-top: 45px;
       padding-bottom: 57px;
+      padding-left: 0;
     }
 
     &__title {
@@ -50,21 +53,33 @@
 
     &__title-wrapper {
       width: 1220px;
-      padding-top: 75px;
-      padding-bottom: 50px;
+      padding-top: 70px;
+      padding-bottom: 57px;
     }
   }
 }
 
 .more {
   &__wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     padding: 25px 0;
-    width: 280px;
+    width: auto;
     margin: 0 auto;
-    border-bottom: 1px solid #e6e6e6;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &__wrapper::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #cdcdcd;
+    height: 1px;
+    width: 100%;
   }
 
   &__plus {
@@ -95,6 +110,7 @@
     &__wrapper {
       display: flex;
       flex-direction: column;
+      align-items: center;
       flex-wrap: wrap;
       padding: 40px;
       margin: 30px;
@@ -103,6 +119,11 @@
       text-align: center;
       width: 242px;
     }
+
+    &__wrapper::after {
+      display: none;
+    }
+
 
     &__plus {
       margin: 35px auto 20px;
@@ -125,23 +146,47 @@
 
     &__show {
       padding: 10px 15px;
+      width: 214px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .more {
+    box-sizing: border-box;
+
     &__wrapper {
-      width: 163px;
+      margin: 40px;
+      margin-top: 110px;
+      margin-bottom: 28px;
+      padding-left: 37px;
+      padding-right: 37px;
+      border: 1px solid @main-gray;
+      width: 169px;
+      /*width: 163px;
       margin: 40px;
       margin-top: 110px;
       margin-bottom: 27px;
       border: 1px solid @main-gray;
-      text-align: center;
+      text-align: center;*/
     }
 
     &__title {
-      margin: 40px auto 25px;
+      margin: 35px auto 20px;
+    }
+
+    &__slogan {
+      font-size: 16px;
+      padding: 0;
+      padding-top: 0;
+      padding-bottom: 68px;
+      margin: 10px 0 19px;
+      width: 169px;
+    }
+
+    &__show {
+      padding: 10px 15px;
+      width: 139px;
     }
   }
 }

@@ -1,7 +1,7 @@
 .example {
-  background-color: @main-gray;
   color: #111111;
   font-weight: 400;
+  position: relative;
 
   &__wrapper {
     margin: 0 auto;
@@ -35,7 +35,6 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: -20px;
-    background: #f2f2f2;
   }
 
   &__item {
@@ -70,16 +69,25 @@
     margin: 0;
     padding-top: 6px;
   }
+}
 
-  &__second-wrapper {
-    height: 355px;
-  }
+.example::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: @main-gray;
+  z-index: -1;
 }
 
 @media (min-width: @tablet-width) {
   .example {
+    position: relative;
+
     &__wrapper {
-      width: 708px;
+      width: auto;
     }
 
     &__description {
@@ -95,8 +103,11 @@
     }
 
     &__first-wrapper {
+      margin: 0 auto;
+      width: 708px;
       display: flex;
       flex-direction: column;
+      padding-bottom: 235px;
     }
 
     &__list {
@@ -144,20 +155,31 @@
       line-height: 30px;
       margin-left: auto;
     }
+  }
 
-    &__second-wrapper {
-      height: 698px;
-    }
+  .example::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 460px;
+    width: 100%;
+    background-color: @main-gray;
+    z-index: -1;
   }
 }
 
 
 @media (min-width: @desktop-width) {
   .example {
+    position: relative;
+    background-color: transparent;
+
     &__wrapper {
       width: 1220px;
       display: flex;
-      justify-content: space-between;
+      flex-direction: row;
+      justify-content: flex-start;
     }
 
     &__description {
@@ -170,12 +192,13 @@
     }
 
     &__first-wrapper {
-      width: 570px;
+      width: auto;
+      padding-bottom: 0;
     }
 
     &__second-wrapper {
-      width: 610px;
-      height: 600px;
+      width: 100%;
+      height: auto;
     }
 
     &__middle-wrapper {
@@ -193,6 +216,232 @@
       text-align: left;
       padding-top: 35px;
       max-width: 400px;
+    }
+  }
+
+  .example::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 465px;
+    width: 100%;
+    background-color: @main-gray;
+    z-index: -1;
+  }
+}
+
+.cat {
+  &__slim {
+    display: none;
+  }
+
+  &__picture {
+    padding-top: 32px;
+    margin-left: -20px;
+  }
+
+  &__fat {
+    width: 311px;
+    height: auto;
+    margin: 0 auto;
+    margin-left: -17px;
+    padding-top: 29px;
+  }
+
+  &__button {
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    cursor: pointer;
+    color: #111111;
+  }
+
+  &__range {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 195px;
+    margin: 0 auto;
+    padding: 35px 0 37px;
+  }
+
+  &__bar {
+    position: relative;
+    max-width: 84px;
+    width: 100%;
+    height: 14px;
+    border: 1px solid #d9d9d9;
+    border-radius: 50px;
+    background: #ffffff;
+  }
+
+  &__bar::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    right: 5px;
+    width: 35px;
+    height: 6px;
+    border-radius: 50px;
+    background: #68b738;
+    transform: translateY(-50%);
+    transition: 0.3s;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .cat {
+    position: relative;
+
+    &__fat {
+      position: absolute;
+      right: 0;
+      max-width: 100%;
+      margin: 0 auto;
+      clip: rect(auto, 338px, auto, auto);
+      width: 690px;
+      bottom: 115px;
+      left: 16px;
+    }
+
+    &__slim {
+      display: block;
+      position: absolute;
+      bottom: 117px;
+      left: 17px;
+      right: 0;
+      max-width: 100%;
+      margin: 0 auto;
+      clip: rect(auto, auto, auto, 338px);
+      width: 690px;
+    }
+
+    &__button {
+      font-size: 20px;
+      padding: 5px 0;
+      border-bottom: 1px dotted #d9d9d9;
+    }
+
+    &__range {
+      max-width: 575px;
+      padding: 363px 0 70px;
+    }
+
+    &__bar {
+      position: relative;
+      max-width: 428px;
+      height: 6px;
+      margin: 0 25px;
+      background: #d9d9d9;
+      border-radius: 0;
+    }
+
+    &__toggle {
+      position: absolute;
+      bottom: -14px;
+      left: 199px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid #dcdcdc;
+      background: #ffffff;
+    }
+
+    &__bar::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: -9px;
+      right: 0;
+      left: 6px;
+      width: 8px;
+      height: 8px;
+      margin: auto;
+      border-radius: 50%;
+      background-color: #68b738;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .cat {
+    position: relative;
+    height: auto;
+
+    &__fat {
+      position: absolute;
+      right: 0;
+      margin: 0 auto;
+      clip: rect(auto, 365px, auto, auto);
+      width: 690px;
+      left: 120px;
+      padding-bottom: 20px;
+    }
+
+    &__slim {
+      display: block;
+      position: absolute;
+      top: -45px;
+      left: 120px;
+      right: 0;
+      max-width: 100%;
+      margin: 0 auto;
+      clip: rect(auto, auto, auto, 365px);
+      width: 690px;
+    }
+
+    &__button {
+      font-size: 20px;
+      padding: 5px 0;
+      border-bottom: 1px dotted #d9d9d9;
+    }
+
+    &__range {
+      max-width: 575px;
+      padding: 503px 0 70px;
+      padding-left: 200px;
+      margin-top: auto;
+    }
+
+    &__bar {
+      position: relative;
+      max-width: 428px;
+      height: 6px;
+      margin: 0 25px;
+      background: #d9d9d9;
+      border-radius: 0;
+    }
+
+    &__toggle {
+      position: absolute;
+      bottom: -14px;
+      left: 198px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid #dcdcdc;
+      background: #ffffff;
+    }
+
+    &__bar::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: -9px;
+      right: 0;
+      left: 6px;
+      width: 8px;
+      height: 8px;
+      margin: auto;
+      border-radius: 50%;
+      background-color: #68b738;
     }
   }
 }
