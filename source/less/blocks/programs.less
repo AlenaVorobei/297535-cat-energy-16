@@ -57,12 +57,79 @@
 
 
   &__link {
+    position: relative;
     margin-top: 18px;
     font-weight: normal;
     font-size: 16px;
     line-height: 16px;
     text-transform: uppercase;
     color: #111111;
+  }
+
+  &__link:disabled {
+    color: rgba(17, 17, 17, 0.3);
+  }
+
+  &__link::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/icon-right-arrow-long.svg");
+    width: 25px;
+    height: 12px;
+    left: 97px;
+    top: 2px;
+  }
+
+  &__link:disabled::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+    width: 34px;
+    height: 12px;
+    left: 97px;
+    top: 2px;
+    color: rgba(17, 17, 17, 0.3);
+  }
+
+  &__link--pro::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/icon-right-arrow-long.svg");
+    width: 25px;
+    height: 12px;
+    left: 95px;
+    top: 2px;
+  }
+
+  &__link--pro:disabled::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/icon-right-arrow-long.svg");
+    width: 25px;
+    height: 12px;
+    left: 95px;
+    top: 2px;
+    color: rgba(17, 17, 17, 0.3);
+  }
+
+  &__link:hover::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+    width: 34px;
+    height: 12px;
+    left: 97px;
+    top: 2px;
+  }
+
+  &__link--pro:hover::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/icon-right-arrow-long.svg");
+    width: 25px;
+    height: 12px;
+    left: 95px;
+    top: 2px;
   }
 
   &__description {
@@ -137,6 +204,68 @@
       margin: 0;
       padding-top: 35px;
     }
+
+    &__link::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/icon-right-arrow-long.svg");
+      width: 25px;
+      height: 12px;
+      left: 131px;
+      top: 39px;
+    }
+
+    &__link:disabled::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/icon-right-arrow-verylong.svg");
+      width: 34px;
+      height: 12px;
+      left: 131px;
+      top: 39px;
+      color: rgba(17, 17, 17, 0.3);
+    }
+
+    &__link--pro::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/icon-right-arrow-long.svg");
+      width: 25px;
+      height: 12px;
+      left: 126px;
+      top: 39px;
+    }
+
+    &__link--pro:disabled::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/icon-right-arrow-verylong.svg");
+      width: 34px;
+      height: 12px;
+      left: 126px;
+      top: 39px;
+      color: rgba(17, 17, 17, 0.3);
+    }
+
+    &__link:hover::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/icon-right-arrow-verylong.svg");
+      width: 34px;
+      height: 12px;
+      left: 131px;
+      top: 39px;
+    }
+
+    &__link--pro:hover::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/icon-right-arrow-verylong.svg");
+      width: 34px;
+      height: 12px;
+      left: 126px;
+      top: 39px;
+    }
   }
 }
 
@@ -204,6 +333,68 @@
 
     &__link {
       padding-top: 10px;
+    }
+
+    &__link::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/icon-right-arrow-long.svg");
+      width: 25px;
+      height: 12px;
+      left: 130px;
+      top: 13px;
+    }
+
+    &__link:disabled::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/icon-right-arrow-verylong.svg");
+      width: 25px;
+      height: 12px;
+      left: 130px;
+      top: 13px;
+      color: rgba(17, 17, 17, 0.3);
+    }
+
+    &__link--pro::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/icon-right-arrow-long.svg");
+      width: 25px;
+      height: 12px;
+      left: 121px;
+      top: 13px;
+    }
+
+    &__link--pro:disabled::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/icon-right-arrow-verylong.svg");
+      width: 34px;
+      height: 12px;
+      left: 121px;
+      top: 13px;
+      color: rgba(17, 17, 17, 0.3);
+    }
+
+    &__link:hover::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/icon-right-arrow-verylong.svg");
+      width: 34px;
+      height: 12px;
+      left: 130px;
+      top: 13px;
+    }
+
+    &__link--pro:hover::after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/icon-right-arrow-verylong.svg");
+      width: 34px;
+      height: 12px;
+      left: 121px;
+      top: 13px;
     }
   }
 }
