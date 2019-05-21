@@ -10,7 +10,7 @@
 
   &__title {
     .title;
-    padding-top: 49px;
+    padding-top: 30px;
     padding-bottom: 36px;
     margin: 0;
   }
@@ -98,7 +98,7 @@
     &__title {
       font-size: 60px;
       line-height: 60px;
-      padding-top: 42px;
+      padding-top: 45px;
       padding-bottom: 65px;
     }
 
@@ -107,7 +107,7 @@
       width: 708px;
       display: flex;
       flex-direction: column;
-      padding-bottom: 235px;
+      padding-bottom: 222px;
     }
 
     &__list {
@@ -187,7 +187,7 @@
     }
 
     &__title {
-      padding-top: 8px;
+      padding-top: 15px;
       padding-bottom: 145px;
     }
 
@@ -255,6 +255,7 @@
     background: transparent;
     border: none;
     text-transform: uppercase;
+    font-family: "Oswald", "Arial", sans-serif;
     font-size: 16px;
     cursor: pointer;
     color: #111111;
@@ -266,7 +267,7 @@
     align-items: center;
     max-width: 195px;
     margin: 0 auto;
-    padding: 35px 0 37px;
+    padding: 30px 0 37px;
   }
 
   &__bar {
@@ -327,9 +328,17 @@
       border-bottom: 1px dotted #d9d9d9;
     }
 
+    &__button:hover {
+      border-bottom: 1px solid #d9d9d9;
+    }
+
+    &__button:disabled {
+      border-bottom: none;
+    }
+
     &__range {
       max-width: 575px;
-      padding: 363px 0 70px;
+      padding: 370px 0 63px;
     }
 
     &__bar {
@@ -350,6 +359,16 @@
       border-radius: 50%;
       border: 1px solid #dcdcdc;
       background: #ffffff;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    &__toggle:hover {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &__toggle:disabled {
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+      border: solid 2px #68b738;
     }
 
     &__bar::after {
@@ -380,7 +399,7 @@
       margin: 0 auto;
       clip: rect(auto, 365px, auto, auto);
       width: 690px;
-      left: 120px;
+      left: 125px;
       padding-bottom: 20px;
     }
 
@@ -388,7 +407,7 @@
       display: block;
       position: absolute;
       top: -45px;
-      left: 120px;
+      left: 125px;
       right: 0;
       max-width: 100%;
       margin: 0 auto;
