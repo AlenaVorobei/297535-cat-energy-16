@@ -1,205 +1,195 @@
-.catalog {
-  &__wrapper {
-    margin: 0 auto;
-    width: auto;
-    min-width: 260px;
-  }
+.catalog__wrapper {
+  margin: 0 auto;
+  width: auto;
+  min-width: 260px;
+}
 
-  &__title-wrapper {
-    width: auto;
-    margin: 0 auto;
-    padding-top: 27px;
-    padding-left: 20px;
-    padding-bottom: 40px;
-    border-bottom: 1px solid #e6e6e6;
-  }
+.catalog__title-wrapper {
+  width: auto;
+  margin: 0 auto;
+  padding-top: 27px;
+  padding-left: 20px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e6e6e6;
+}
 
-  &__title {
-    .title;
-    margin: 0;
-  }
+.catalog__title {
+  .title;
+  margin: 0;
 }
 
 @media (min-width: @tablet-width) {
-  .catalog {
-    &__wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      width: 768px;
-      margin: 0 auto;
-    }
+  .catalog__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 768px;
+    margin: 0 auto;
+  }
 
-    &__title-wrapper {
-      width: 708px;
-      border: none;
-      padding-top: 45px;
-      padding-bottom: 57px;
-      padding-left: 0;
-    }
+  .catalog__title-wrapper {
+    width: 708px;
+    border: none;
+    padding-top: 45px;
+    padding-bottom: 57px;
+    padding-left: 0;
+  }
 
-    &__title {
-      font-size: 60px;
-      line-height: 60px;
-    }
+  .catalog__title {
+    font-size: 60px;
+    line-height: 60px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .catalog {
-    &__wrapper {
-      width: 1300px;
-      margin: 0 auto;
-    }
+  .catalog__wrapper {
+    width: 1300px;
+    margin: 0 auto;
+  }
 
-    &__title-wrapper {
-      width: 1220px;
-      padding-top: 70px;
-      padding-bottom: 57px;
-    }
+  .catalog__title-wrapper {
+    width: 1220px;
+    padding-top: 70px;
+    padding-bottom: 57px;
   }
 }
 
-.more {
-  &__wrapper {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding: 25px 0;
-    width: auto;
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+.more__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 25px 0;
+  width: auto;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
-  &__wrapper::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background: #cdcdcd;
-    height: 1px;
-    width: 100%;
-  }
+.more__wrapper::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #cdcdcd;
+  height: 1px;
+  width: 100%;
+}
 
-  &__plus {
-    margin: 0 auto;
-    font-size: 30px;
-    width: 31px;
-    height: 31px;
-    background-image: url("../img/icon-plus-mobile.svg");
-    background-size: 31px;
-    background-position: bottom;
-    background-repeat: no-repeat;
-  }
+.more__plus {
+  margin: 0 auto;
+  font-size: 30px;
+  width: 31px;
+  height: 31px;
+  background-image: url("../img/icon-plus-mobile.svg");
+  background-size: 31px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
 
-  &__title {
-    .title-product;
-    margin: 0 auto;
-    padding-top: 23px;
-  }
+.more__title {
+  .title-product;
+  margin: 0 auto;
+  padding-top: 23px;
+}
 
-  &__slogan {
-    .product-table;
-    margin: 0 auto;
-    padding-top: 8px;
-    padding-bottom: 18px;
-  }
+.more__slogan {
+  .product-table;
+  margin: 0 auto;
+  padding-top: 8px;
+  padding-bottom: 18px;
+}
 
-  &__show {
-    padding: 10px 15px;
-  }
+.more__show {
+  padding: 10px 15px;
 }
 
 @media (min-width: @tablet-width) {
-  .more {
-    &__wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      flex-wrap: wrap;
-      padding: 40px;
-      margin: 30px;
-      margin-top: 107px;
-      border: 1px solid @main-gray;
-      text-align: center;
-      width: 242px;
-    }
+  .more__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px;
+    margin: 30px;
+    margin-top: 107px;
+    border: 1px solid @main-gray;
+    text-align: center;
+    width: 242px;
+  }
 
-    &__wrapper::after {
-      display: none;
-    }
+  .more__wrapper::after {
+    display: none;
+  }
 
 
-    &__plus {
-      margin: 14px auto 11px;
-      font-size: 30px;
-      width: 61px;
-      height: 61px;
-      background-size: 61px;
-    }
+  .more__plus {
+    margin: 14px auto 11px;
+    font-size: 30px;
+    width: 61px;
+    height: 61px;
+    background-size: 61px;
+  }
 
-    &__title {
-      margin: 36px 40px 19px;
-      font-size: 20px;
-      line-height: 20px;
-      padding-top: 0;
-    }
+  .more__title {
+    margin: 36px 40px 19px;
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 0;
+  }
 
-    &__slogan {
-      font-size: 16px;
-      padding-top: 0;
-      padding-bottom: 68px;
-      margin: 10px 20px 19px;
-    }
+  .more__slogan {
+    font-size: 16px;
+    padding-top: 0;
+    padding-bottom: 68px;
+    margin: 10px 20px 19px;
+  }
 
-    &__show {
-      padding: 10px 15px;
-      width: 214px;
-    }
+  .more__show {
+    padding: 10px 15px;
+    width: 214px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .more {
     box-sizing: border-box;
+  }
 
-    &__wrapper {
-      margin: 40px;
-      margin-top: 110px;
-      margin-bottom: 28px;
-      padding-left: 37px;
-      padding-right: 37px;
-      border: 1px solid @main-gray;
-      width: 169px;
-      /*width: 163px;
-      margin: 40px;
-      margin-top: 110px;
-      margin-bottom: 27px;
-      border: 1px solid @main-gray;
-      text-align: center;*/
-    }
+  .more__wrapper {
+    margin: 40px;
+    margin-top: 110px;
+    margin-bottom: 28px;
+    padding-left: 37px;
+    padding-right: 37px;
+    border: 1px solid @main-gray;
+    width: 169px;
+    /*width: 163px;
+    margin: 40px;
+    margin-top: 110px;
+    margin-bottom: 27px;
+    border: 1px solid @main-gray;
+    text-align: center;*/
+  }
 
-    &__title {
-      margin: 19px auto 20px;
-    }
+  .more__title {
+    margin: 19px auto 20px;
+  }
 
-    &__slogan {
-      font-size: 16px;
-      padding: 0;
-      padding-top: 0;
-      padding-bottom: 68px;
-      margin: 10px 0 19px;
-      width: 169px;
-    }
+  .more__slogan {
+    font-size: 16px;
+    padding: 0;
+    padding-top: 0;
+    padding-bottom: 68px;
+    margin: 10px 0 19px;
+    width: 169px;
+  }
 
-    &__show {
-      padding: 10px 15px;
-      width: 139px;
-    }
+  .more__show {
+    padding: 10px 15px;
+    width: 139px;
+  }
 
-    &__plus {
-      margin: 12px auto 26px;
-    }
+  .more__plus {
+    margin: 12px auto 26px;
   }
 }
