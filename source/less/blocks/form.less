@@ -156,7 +156,7 @@
   border-radius: 50%;
 }
 
-.field-target__weight-loss:hover::after {
+.field-target__weight-loss:hover::after, .field-target__weight-loss:focus::after {
   border: 1px solid #bababa;
 }
 
@@ -175,7 +175,7 @@
   border-radius: 50%;
 }
 
-.field-target__fat:hover::after {
+.field-target__fat:hover::after, .field-target__fat:focus::after {
   border: 1px solid #bababa;
 }
 
@@ -198,7 +198,7 @@
   opacity: 0.3;
 }
 
-.field-target__dont-know:hover::after {
+.field-target__dont-know:hover::after, .field-target__dont-know:focus::after {
   border: 1px solid #bababa;
 }
 
@@ -275,7 +275,15 @@
 }
 
 .field-target input[type="radio"] {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .field-target input[type="radio"]:checked + .field-target__weight-loss::before {
@@ -289,6 +297,15 @@
 .field-target input[type="radio"]:checked + .field-target__dont-know::before {
   display: block;
 }
+
+.field-target__weight-loss:active, .field-target__fat:active, .field-target__dont-know:active {
+  opacity: 0.6;
+}
+
+.field-target__weight-loss:focus, .field-target__fat:focus, .field-target__dont-know:focus {
+  opacity: 0.6;
+}
+
 
 
 @media (min-width: @tablet-width) {
@@ -1060,7 +1077,15 @@
 }
 
 .field-extra__checkbox--content {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .field-extra__checkbox {
@@ -1097,6 +1122,14 @@
 
 .field-extra input[type="checkbox"]:checked + .field-extra__checkbox::before {
   display: block;
+}
+
+.field-extra__checkbox:active {
+  opacity: 0.6;
+}
+
+.field-extra__checkbox:focus {
+  opacity: 0.6;
 }
 
 @media (min-width: @tablet-width) {
