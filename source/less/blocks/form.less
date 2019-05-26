@@ -26,8 +26,9 @@
 
   .form__wrapper {
     display: flex;
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 1300px;
   }
 }
 
@@ -129,7 +130,7 @@
   .field-cat {
     width: 570px;
     padding: 0;
-    margin-left: 40px;
+    margin-left: 0;
     margin-right: 40px;
   }
 
@@ -440,7 +441,7 @@
     padding-bottom: 0;
     padding-top: 33px;
     margin-left: 40px;
-    margin-right: 40px;
+    margin-right: 0;
     margin-bottom: 62px;
   }
 
@@ -700,7 +701,7 @@
     position: absolute;
     top: 4px;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 3px;
     margin-top: 12px;
     background: #68b738;
@@ -712,7 +713,7 @@
     position: absolute;
     top: 4px;
     right: 0;
-    width: 100vw;
+    width: 100%;
     height: 3px;
     margin-top: 12px;
     background: #68b738;
@@ -790,27 +791,55 @@
     margin-right: 0;
     margin-bottom: 40px;
     padding-top: 0;
-    padding-left: 70px;
+    padding-left: 0;
+    box-sizing: border-box;
+    max-width: 1300px;
   }
 
   .field-owner__title {
     font-size: 36px;
-    margin-left: 0;
+    padding-bottom: 80px;
+    margin-left: -40px;
+    margin-bottom: 0;
     margin-right: 0;
-    padding-left: 38px;
-    padding-right: 38px;
+    padding-left: 40px;
     width: 520px;
   }
 
   .field-owner__wrapper {
     display: flex;
     padding-left: 0;
+    padding-right: 0;
   }
 
   .field-owner__title-wrapper::before {
+    content: "";
+    position: absolute;
     top: 4px;
+    left: 0;
     width: 100vw;
+    height: 3px;
+    margin-top: 12px;
+    background: #68b738;
+    z-index: -1;
   }
+
+  .field-owner__title-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 0;
+    width: 100vw;
+    height: 3px;
+    margin-top: 12px;
+    background: #68b738;
+    z-index: -1;
+  }
+
+  /*.field-owner__title-wrapper::before {
+    top: 4px;
+    width: 100%;
+  }*/
 
   .field-owner__row {
     margin-left: 19px;
@@ -820,7 +849,7 @@
   .field-owner__e-mail {
     width: 50%;
     margin-right: 40px;
-    margin-left: 40px;
+    margin-left: 0;
   }
 
   .field-owner__row--phone-icon {
@@ -829,7 +858,7 @@
 
   .field-owner__phone {
     width: 50%;
-    margin-right: 40px;
+    margin-right: 0;
     margin-left: 40px;
   }
 
@@ -989,20 +1018,25 @@
     width: auto;
     margin: 0 auto;
     margin-bottom: 72px;
-    padding-left: 70px;
+    padding-left: 0;
+    max-width: 1300px;
   }
 
   .field-comment__title {
     font-size: 36px;
     padding-bottom: 80px;
-    margin-left: 0;
+    margin-left: -40px;
     margin-bottom: 0;
     margin-right: 0;
-    padding-left: 38px;
+    padding-left: 40px;
     width: 180px;
   }
 
   .field-comment__title-wrapper::before {
+    top: 4px;
+  }
+
+  .field-comment__title-wrapper::after {
     top: 4px;
   }
 
@@ -1014,8 +1048,8 @@
     padding-top: 17px;
     padding-left: 18px;
     text-transform: uppercase;
-    margin-left: 38px;
-    margin-right: 110px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -1261,21 +1295,22 @@
 
 @media (min-width: @desktop-width) {
   .field-extra {
-    padding-left: 70px;
+    padding-left: 0;
+    max-width: 1300px;
   }
 
   .field-extra__title {
-    margin-left: 0;
+    margin-left: -40px;
     margin-right: 0;
     padding-bottom: 39px;
-    padding-left: 38px;
+    padding-left: 40px;
     width: 208px;
   }
 
   .field-extra__wrapper {
     width: 1220px;
-    margin-left: 38px;
-    margin-right: 110px;
+    margin-left: 0;
+    margin-right: 0;
     padding-right: 0;
     /*flex-wrap: nowrap;*/
   }
