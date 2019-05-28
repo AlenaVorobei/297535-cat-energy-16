@@ -67,6 +67,9 @@
 }
 
 .example__result {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
   .title;
   font-size: 14px;
   text-transform: uppercase;
@@ -75,6 +78,13 @@
   padding-top: 6px;
 }
 
+.example__result-title {
+  margin: 0;
+}
+
+.example__result-number {
+  margin: 0;
+}
 
 .example::after {
   content: "";
@@ -160,6 +170,8 @@
     font-size: 20px;
     line-height: 30px;
     margin-left: auto;
+    flex-direction: column;
+    padding-top: 33px;
   }
 
   .example::after {
@@ -223,6 +235,12 @@
     text-align: left;
     padding-top: 35px;
     max-width: 400px;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .example__result-number {
+    padding-left: 70px;
   }
 
   .example::after {
@@ -272,7 +290,7 @@
   align-items: center;
   max-width: 195px;
   margin: 0 auto;
-  padding: 30px 0 37px;
+  padding: 30px 0 34px;
 }
 
 .cat__bar {
