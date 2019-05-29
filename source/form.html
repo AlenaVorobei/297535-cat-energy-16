@@ -66,9 +66,11 @@
     <main class="page-main">
       <div class="container">
         <section class="selection">
-          <h1 class="selection__title">Подбор программы</h1>
-          <form class="selection__form form" method="post" action="https://echo.htmlacademy.ru">
+          <div class="selection__title-wrapper">
+            <h1 class="selection__title">Подбор программы</h1>
             <p class="selection__info">Заполните анкету и мы подберем программу питания для вашего кота </p>
+          </div>
+          <form class="selection__form form" method="post" action="https://echo.htmlacademy.ru">
             <div class="form__wrapper">
               <div class="form__field-wrapper">
                 <fieldset class="form__field field-cat">
@@ -102,10 +104,12 @@
                 </fieldset>
               </div>
             </div>
-            <fieldset class="form__field field-owner">
-              <div class="field-owner__title-wrapper">
+            <div class="field-owner__title-wrapper">
+              <div class="field-owner__second-title-wrapper">
                 <h3 class="field-owner__title">Контактные данные (владельца кота)</h3>
               </div>
+            </div>
+            <fieldset class="form__field field-owner">
               <div class="field-owner__wrapper">
                 <label class="field-owner__e-mail">E-mail:*
                   <input class="field-owner__row field-owner__row--mail-icon" type="email" placeholder="kuklachev@gmail.com" required>
@@ -117,16 +121,20 @@
                 </label>
               </div>
             </fieldset>
-            <fieldset class="form__field field-comment">
-              <div class="field-comment__title-wrapper">
+            <div class="field-comment__title-wrapper">
+              <div class="field-comment__second-title-wrapper">
                 <h3 class="field-comment__title">Комментарий</h3>
               </div>
+            </div>
+            <fieldset class="form__field field-comment">
               <textarea class="field-comment__row" name="comment" required>Расскажите обо всех повадках кота</textarea>
             </fieldset>
-            <fieldset class="form__field field-extra">
-              <div class="field-extra__title-wrapper">
+            <div class="field-extra__title-wrapper">
+              <div class="field-extra__second-title-wrapper">
                 <h3 class="field-extra__title">Дополнительно</h3>
-              </div>
+              <div>
+            </div>
+            <fieldset class="form__field field-extra">
               <div class="field-extra__wrapper">
                 <div class="field-extra__checkbox-wrapper">
                   <input class="field-extra__checkbox field-extra__checkbox--content" type="checkbox" id="sugar" name="sugar" checked>
@@ -166,8 +174,8 @@
         </section>
       </div>
       <section class="contacts">
-        <div class="contacts__container">
-          <div class="contacts__wrapper contacts__wrapper--form">
+        <div class="contacts__container contacts__container--form">
+          <div class="contacts__wrapper">
             <h2 class="visually-hidden">Контакты</h2>
             <b class="contacts__slogan">Приглашаем <br>к сотрудничеству дилеров!</b>
             <div class="contacts__adress">

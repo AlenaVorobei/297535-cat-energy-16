@@ -135,6 +135,15 @@
   color: #111111;
 }
 
+.site-menu__link:hover {
+  color: rgba(17, 17, 17, 0.6);
+}
+
+.site-menu__link:active {
+  color: rgba(17, 17, 17, 0.3);
+}
+
+
 @media (min-width: @tablet-width) {
   .site-menu {
     flex-direction: row;
@@ -163,6 +172,10 @@
 
   .site-menu__link--index:active {
     color: rgba(255, 255, 255, 0.3);
+  }
+
+  .site-menu__link--index:hover {
+    color: rgba(255, 255, 255, 0.6);
   }
 
   .site-menu__item--active {
