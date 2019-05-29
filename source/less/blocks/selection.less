@@ -1,51 +1,56 @@
 .selection {
   width: auto;
   margin: 0 auto 30px;
+}
 
-  &__title {
-    .title;
-    margin-top: 27px;
-    margin-bottom: 25px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+.selection__title-wrapper {
+  max-width: 320px;
+  margin: 0 auto;
+}
 
-  &__info {
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 18px;
-    color: #444444;
-    text-transform: uppercase;
-    margin-top: 37px;
-    margin-bottom: 22px;
-    padding-left: 20px;
-    padding-right: 40px;
-  }
+.selection__title {
+  .title;
+  margin-top: 27px;
+  margin-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
-  &__legend {
-    .description;
-    line-height: 16px;
-    text-align: center;
-  }
+.selection__info {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
+  text-transform: uppercase;
+  margin-top: 37px;
+  margin-bottom: 22px;
+  padding-left: 20px;
+  padding-right: 40px;
+}
 
-  &__submit {
-    display: flex;
-    flex-direction: column;
-    width: auto;
-  }
+.selection__legend {
+  .description;
+  line-height: 16px;
+  text-align: center;
+}
 
-  &__button-wrapper {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+.selection__submit {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+}
 
-  &__button {
-    margin-top: 5px;
-    margin-bottom: 18px;
-    border: none;
-    padding: 11px 0;
-    width: 100%;
-  }
+.selection__button-wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.selection__button {
+  margin-top: 5px;
+  margin-bottom: 18px;
+  border: none;
+  padding: 11px 0;
+  width: 100%;
 }
 
 @media (min-width: @tablet-width) {
@@ -53,121 +58,136 @@
     width: auto;
     margin: 0 auto;
     padding-bottom: 55px;
+  }
 
-    &__title {
-      font-size: 60px;
-      line-height: 60px;
-      margin-top: 39px;
-      margin-bottom: 25px;
-      margin-left: 29px;
-      padding: 0;
-    }
+  .selection__title-wrapper {
+    max-width: 768px;
+    margin: 0 auto;
+  }
 
-    &__info {
-      margin: 0 auto;
-      margin-left: 50px;
-      margin-right: 330px;
-      font-size: 20px;
-      line-height: 30px;
-      margin-top: 55px;
-      margin-bottom: 55px;
-    }
+  .selection__title {
+    font-size: 60px;
+    line-height: 60px;
+    margin-top: 39px;
+    margin-bottom: 25px;
+    margin-left: 29px;
+    padding: 0;
+  }
 
-    &__submit {
-      flex-direction: row;
-      justify-content: space-between;
-      padding-left: 0;
-      padding-right: 0;
-      margin: 0 auto;
-      width: auto;
-      margin-left: 70px;
-      margin-right: 70px;
-      padding-top: 3px;
-    }
+  .selection__info {
+    margin: 0 auto;
+    margin-left: 50px;
+    margin-right: 330px;
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 55px;
+    margin-bottom: 55px;
+  }
 
-    &__legend {
-      font-size: 16px;
-      line-height: 16px;
-      flex: 0 0 50%;
-      max-width: 50%;
-      padding-left: 0;
-      padding-right: 30px;
-      margin: 20px 0;
-      text-align: left;
-    }
+  .selection__submit {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+    width: 628px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-top: 3px;
+  }
 
-    &__button-wrapper {
-      flex: 0 0 50%;
-      max-width: 50%;
-      padding-left: 0;
-      padding-right: 30px;
-      margin-left: 0;
-      margin-right: 0;
-    }
+  .selection__legend {
+    font-size: 16px;
+    line-height: 16px;
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-left: 30px;
+    /*margin-right: -30px;*/
+    padding-right: 0;
+    margin: 20px 0;
+    text-align: left;
+  }
 
-    &__button {
-      font-size: 20px;
-      margin-bottom: 18px;
-      border: none;
-      padding: 16px 20px;
-      width: 284px;
-    }
+  .selection__button-wrapper {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .selection__button {
+    font-size: 20px;
+    margin-bottom: 18px;
+    border: none;
+    padding: 16px 20px;
+    width: 284px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .selection {
-    width: 1440px;
+    width: auto;
     padding-bottom: 65px;
+    margin: 0 auto;
+    /*max-width: auto;*/
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 
-    &__title {
-      margin-top: 70px;
-      margin-left: 110px;
-    }
+  .selection__title-wrapper {
+    max-width: 1220px;
+    margin: 0 auto;
+  }
 
-    &__info {
-      padding-left: 0;
-      margin-left: 110px;
-      font-size: 20px;
-      line-height: 30px;
-      margin-top: 55px;
-      margin-bottom: 65px;
-      width: 350px;
-    }
+  .selection__title {
+    margin-top: 70px;
+    margin-left: 0;
+  }
 
-    &__button-wrapper {
-      flex: 0 0 50%;
-      max-width: 50%;
-      font-size: 20px;
-      padding: 0;
-      padding-left: 40px;
-      padding-right: 40px;
-    }
+  .selection__info {
+    padding-left: 0;
+    margin-left: 0;
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 55px;
+    margin-bottom: 65px;
+    width: 350px;
+  }
 
-    &__legend {
-      font-size: 16px;
-      line-height: 16px;
-      flex: 0 0 50%;
-      max-width: 50%;
-      padding-left: 40px;
-      padding-right: 40px;
-      margin-top: 18px;
-      text-align: left;
-    }
+  .selection__button-wrapper {
+    flex: 0 0 50%;
+    max-width: 50%;
+    font-size: 20px;
+    padding: 0;
+    padding-left: 0;
+    padding-right: 40px;
+  }
 
-    &__submit {
-      margin-left: 70px;
-      margin-right: 70px;
-      width: 1140px;
-    }
+  .selection__legend {
+    font-size: 16px;
+    line-height: 16px;
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 18px;
+    text-align: left;
+  }
 
-    &__button {
-      display: inline-block;
-      width: 100%;
-      font-size: 20px;
-      margin-bottom: 18px;
-      border: none;
-      padding: 16px 20px;
-    }
+  .selection__submit {
+    margin-left: 0;
+    margin-right: 0;
+    width: 1140px;
+  }
+
+  .selection__button {
+    display: inline-block;
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 18px;
+    border: none;
+    padding: 16px 20px;
   }
 }

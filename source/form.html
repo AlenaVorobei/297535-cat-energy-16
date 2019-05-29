@@ -4,16 +4,18 @@
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <svg style="display:none">
-      <symbol viewBox="0 0 10 19" id="icon-fb" width="100%" height="100%">
+      <symbol viewBox="0 0 10 19" id="icon-fb">
         <title>icon-fb-mobile</title>
         <path d="M7.1 19H2v-8.8H0V5.8h1.9c-.1-2 .2-3.4 1.1-4.4C3.8.5 5 .1 6.5 0H10v4.2H7.2c-.1.2-.2.8-.2 1.6h3v4.4H7.1V19zm-4-1h2.8V9.1h2.9V6.8H5.9v-.5c0-1.4 0-2.6.7-3.1l.1-.1h2.1V1H6.5c-1.2.1-2 .4-2.6 1-.8.8-1 2.3-.8 4.2l.1.6H1.1v2.3h2V18z">
         </path>
       </symbol>
-      <symbol viewBox="0 0 16 16" id="icon-insta" width="100%" height="100%">
+      <symbol viewBox="0 0 16 16" id="icon-insta">
         <title>icon-insta-mobile</title>
         <path class="st0" d="M11.8 1C13.6 1 15 2.4 15 4.2v7.7c0 1.7-1.4 3.1-3.1 3.1H4.2C2.4 15 1 13.6 1 11.8V4.2C1 2.4 2.4 1 4.2 1h7.6m0-1H4.2C1.9 0 0 1.9 0 4.2v7.7C0 14.1 1.9 16 4.2 16h7.7c2.3 0 4.2-1.9 4.2-4.2V4.2C16 1.9 14.1 0 11.8 0z">
         </path>
@@ -21,22 +23,22 @@
         </path><circle class="st0" cx="12.3" cy="3.7" r=".9">
         </circle>
       </symbol>
-      <symbol viewBox="0 0 22 12" id="icon-vk" width="100%" height="100%">
+      <symbol viewBox="0 0 22 12" id="icon-vk">
         <title>icon-vk-mobile</title>
         <path d="M17.6 12c-.3 0-.9-.1-1.5-.5-.5-.3-.9-.7-1.3-1.2-.3-.3-.9-.9-1.1-.9-.2.1-.4.7-.3 1.2 0 .1 0 .6-.3.9-.3.3-.8.4-.9.4h-1.4c-.7 0-3.2-.2-5.4-2.3C2.5 7.1.2 2.2.1 2 0 1.6-.1 1.2.2.9c.3-.3.8-.4 1-.4h3.1c.1 0 .4.1.7.3.3.2.4.5.5.6 0 0 .5 1.1 1.1 2 1 1.5 1.4 1.9 1.5 2 .1-.4.2-1.4.1-2.3 0-.4-.1-.8-.2-1-.1-.1-.3-.2-.5-.2l-.6-.5c0-.5.5-.9.9-1.1.5-.2 1.3-.3 2.3-.3h.5c.9 0 1.2.1 1.6.1 1.2.3 1.2 1.3 1.1 2.5v1.6c0 .3 0 .8.1 1 .2-.1.6-.5 1.5-1.9.6-.9 1-1.9 1.1-2.1.1-.3.4-.7 1.2-.7h3.4c.7 0 1.2.2 1.3.7.2.5.1 1.3-1.7 3.5-.3.3-.5.6-.7.9-.5.4-.9 1-.9 1.1 0 .1.5.5.9.9 1.1.9 1.9 1.7 2.2 2.3.4.6.3 1 .2 1.3-.3.7-1.2.7-1.4.8h-2.9zm-3.9-3.7c.7 0 1.2.6 1.8 1.2.4.4.7.8 1.1 1 .5.3 1 .3 1 .3h2.9c.1 0 .3-.1.4-.1 0 0 0-.1-.1-.1-.3-.5-1-1.3-2-2.1-.9-.7-1.3-1.1-1.4-1.7 0-.6.4-1.1 1.2-2.1.2-.2.4-.5.7-.8 1.1-1.4 1.4-2 1.5-2.3h-3.9c0 .4-.5 1.5-1.1 2.4-1.4 2.1-2 2.4-2.5 2.4-.1 0-.3 0-.4-.1-.7-.4-.7-1.4-.7-2.1V2.6c.1-1.3 0-1.3-.3-1.4-.3-.1-.5-.1-1.4-.1H10c-.5 0-1 0-1.4.1l.2.2c.4.5.4 1.5.4 1.7.1 1.3 0 2.9-.7 3.3-.1 0-.2.1-.4.1-.6 0-1.3-.7-2.5-2.5C5 2.9 4.5 1.8 4.5 1.8s0-.1-.1-.1-.2-.1-.2-.1h-3c.4.9 2.5 5 4.8 7.2 2 1.9 4.3 2 4.7 2h1.4s.2 0 .2-.1v-.1c0-.2 0-2 1.2-2.3h.2z">
         </path>
       </symbol>
-      <symbol viewBox="0 0 60 60" id="htmlacademy" width="100%" height="100%">
+      <symbol viewBox="0 0 60 60" id="htmlacademy">
         <title>htmlacademy</title>
         <path d="M30.2 5H30L10.3 7.1v36.2L30 55l19.7-11.7V7.1L30.2 5zm17 36.8L30 52 12.8 41.8V27l17.1 10.2V39l-11.7-7v1.8L30 40.9v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8L29.9 12.8 12.8 23V9.4L30 7.6l17.2 1.8V23z">
         </path>
       </symbol>
-      <symbol viewBox="0 0 17 13" id="icon-mail" width="100%" height="100%">
+      <symbol viewBox="0 0 17 13" id="icon-mail">
         <title>icon-mail</title>
         <path d="M15.6 11.6H1.4V5.8H0V13h17V5.8h-1.4v5.8zM0 0v2.3l8.5 7.1L17 2.3V0H0zm15.6 1.6L8.5 7.5 1.4 1.6v-.2h14.2v.2z">
         </path>
       </symbol>
-      <symbol viewBox="0 0 20 20" id="icon-phone" width="100%" height="100%">
+      <symbol viewBox="0 0 20 20" id="icon-phone">
         <title>icon-phone</title>
         <path d="M17.9 9.4H9.4v1.2h8.5l-2.1 2.1.9.9 3.1-3.1c.2-.2.2-.6 0-.9l-3.1-3.1-.9.9 2.1 2zm-9.8 10v-6.2c0-.3-.3-.6-.6-.6H3.1c0 .7.6 1.2 1.2 1.2h2.5v5H3.1c-1 .1-1.8-.7-1.9-1.7v-14c0-1 .8-1.8 1.7-1.8h3.9v5H4.4c-.7 0-1.2.6-1.2 1.2h4.4c.3 0 .6-.3.6-.6V.6C8.1.3 7.8 0 7.5 0H3.1C1.5-.1.1 1.2 0 2.9v13.9c-.1 1.7 1.2 3.1 2.9 3.1h4.6c.3.1.6-.2.6-.5z">
         </path>
@@ -47,11 +49,11 @@
         <picture>
           <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img class="page-header__logo image" width="191px" height="39px" src="img/logo-mobile.svg" alt="Логотип Кэт Энерджи">
+          <img class="page-header__logo image" width="191" height="39" src="img/logo-mobile.svg" alt="Логотип Кэт Энерджи">
         </picture>
       </a>
       <nav class="main-nav main-nav--closed main-nav--nojs">
-        <button class="main-nav__toggle" type="button"></button>
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Закрыть</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-menu">
             <li class="site-menu__item"><a class="site-menu__link" href="index.html">Главная</a></li>
@@ -64,9 +66,11 @@
     <main class="page-main">
       <div class="container">
         <section class="selection">
-          <h1 class="selection__title">Подбор программы</h1>
-          <form class="selection__form form" method="post" action="https://echo.htmlacademy.ru">
+          <div class="selection__title-wrapper">
+            <h1 class="selection__title">Подбор программы</h1>
             <p class="selection__info">Заполните анкету и мы подберем программу питания для вашего кота </p>
+          </div>
+          <form class="selection__form form" method="post" action="https://echo.htmlacademy.ru">
             <div class="form__wrapper">
               <div class="form__field-wrapper">
                 <fieldset class="form__field field-cat">
@@ -86,24 +90,26 @@
                 <fieldset class="form__field field-target">
                   <legend class="visually-hidden">Цель программы</legend>
                   <input class="field-target__radio" type="radio" name="radio" id="weight-loss" checked>
-                  <label class="field-target__weight-loss" for="weight-loss">
+                  <label class="field-target__weight-loss" for="weight-loss" tabindex="0">
                     Похудение
                   </label>
                   <input class="field-target__radio" type="radio" name="radio" id="fat">
-                  <label class="field-target__fat" for="fat">
+                  <label class="field-target__fat" for="fat" tabindex="0">
                     Набор массы
                   </label>
                   <input class="field-target__radio" type="radio" name="radio" id="dont-know">
-                  <label class="field-target__dont-know" for="dont-know">
+                  <label class="field-target__dont-know" for="dont-know" tabindex="0">
                     Не знаю (нужен ваш совет)
                   </label>
                 </fieldset>
               </div>
             </div>
-            <fieldset class="form__field field-owner">
-              <div class="field-owner__title-wrapper">
-                <legend class="field-owner__title">Контактные данные (владельца кота)</legend>
+            <div class="field-owner__title-wrapper">
+              <div class="field-owner__second-title-wrapper">
+                <h3 class="field-owner__title">Контактные данные (владельца кота)</h3>
               </div>
+            </div>
+            <fieldset class="form__field field-owner">
               <div class="field-owner__wrapper">
                 <label class="field-owner__e-mail">E-mail:*
                   <input class="field-owner__row field-owner__row--mail-icon" type="email" placeholder="kuklachev@gmail.com" required>
@@ -115,38 +121,42 @@
                 </label>
               </div>
             </fieldset>
-            <fieldset class="form__field field-comment">
-              <div class="field-comment__title-wrapper">
-                <legend class="field-comment__title">Комментарий</legend>
+            <div class="field-comment__title-wrapper">
+              <div class="field-comment__second-title-wrapper">
+                <h3 class="field-comment__title">Комментарий</h3>
               </div>
+            </div>
+            <fieldset class="form__field field-comment">
               <textarea class="field-comment__row" name="comment" required>Расскажите обо всех повадках кота</textarea>
             </fieldset>
-            <fieldset class="form__field field-extra">
-              <div class="field-extra__title-wrapper">
-                <legend class="field-extra__title">Дополнительно</legend>
+            <div class="field-extra__title-wrapper">
+              <div class="field-extra__second-title-wrapper">
+                <h3 class="field-extra__title">Дополнительно</h3>
               </div>
+            </div>
+            <fieldset class="form__field field-extra">
               <div class="field-extra__wrapper">
                 <div class="field-extra__checkbox-wrapper">
                   <input class="field-extra__checkbox field-extra__checkbox--content" type="checkbox" id="sugar" name="sugar" checked>
-                  <label class="field-extra__checkbox field-extra__checkbox--sugar" for="sugar">
+                  <label class="field-extra__checkbox field-extra__checkbox--sugar" for="sugar" tabindex="0">
                     Сахарозаменитель
                   </label>
                 </div>
                 <div class="field-extra__checkbox-wrapper">
                   <input class="field-extra__checkbox field-extra__checkbox--content" type="checkbox" id="water" name="water">
-                  <label class="field-extra__checkbox field-extra__checkbox--water" for="water">
+                  <label class="field-extra__checkbox field-extra__checkbox--water" for="water" tabindex="0">
                     Питьевая вода
                   </label>
                 </div>
                 <div class="field-extra__checkbox-wrapper">
                   <input class="field-extra__checkbox field-extra__checkbox--content" type="checkbox" id="milk" name="milk">
-                  <label class="field-extra__checkbox field-extra__checkbox--milk" for="milk">
+                  <label class="field-extra__checkbox field-extra__checkbox--milk" for="milk" tabindex="0">
                     Молоко
                   </label>
                 </div>
                 <div class="field-extra__checkbox-wrapper">
                   <input class="field-extra__checkbox field-extra__checkbox--content" type="checkbox" id="vitamins" name="vitamins">
-                  <label class="field-extra__checkbox field-extra__checkbox--vitamins" for="vitamins">
+                  <label class="field-extra__checkbox field-extra__checkbox--vitamins" for="vitamins" tabindex="0">
                     Витамины
                   </label>
                 </div>
@@ -164,15 +174,18 @@
         </section>
       </div>
       <section class="contacts">
-        <div class="contacts__container">
-          <div class="contacts__wrapper contacts__wrapper--form">
+        <div class="contacts__container contacts__container--form">
+          <div class="contacts__wrapper">
             <h2 class="visually-hidden">Контакты</h2>
             <b class="contacts__slogan">Приглашаем <br>к сотрудничеству дилеров!</b>
-            <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+            <div class="contacts__adress">
+              <p class="contacts__adress-street">ул. Большая Конюшенная, д. 19/8</p>
+              <p class="contacts__adress-town">Санкт-Петербург</p>
+            </div>
           </div>
         </div>
         <div class="contacts__map-wrapper">
-          <iframe class="contacts__map"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651609!2d30.3208946163521!3d59.93879418187622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1557604190591!5m2!1sru!2sru" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651609!2d30.3208946163521!3d59.93879418187622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1557604190591!5m2!1sru!2sru" style="border:0" allowfullscreen></iframe>
         </div>
       </section>
     </main>
